@@ -87,19 +87,22 @@ Affiliate Landing Page Template
 
     // Render product cards
     const grid = document.getElementById('productGrid');
-    PRODUCTS.forEach(p=>{
-      const card = document.createElement('article'); card.className='card';
-      card.innerHTML = `
-       card.innerHTML = `
-  <div class="thumb"><img src="${p.img}" alt="${p.title}" style="width:100%;height:100%;object-fit:cover;border-radius:8px;"></div>
-  <div class="title">${p.title}</div>
-  <p class="desc">${p.desc}</p>
-  <div class="meta">
-    <a class="btn btn-primary" href="${p.aff}" target="_blank" rel="noopener noreferrer">Buy</a>
-    <button class="copy-btn" data-url="${p.aff}">Copy link</button>
-  </div>`;
-      grid.appendChild(card);
-    });
+PRODUCTS.forEach(p => {
+  const card = document.createElement('article'); 
+  card.className = 'card';
+  card.innerHTML = `
+    <div class="thumb">
+      <img src="${p.img}" alt="${p.title}" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+    </div>
+    <div class="title">${p.title}</div>
+    <p class="desc">${p.desc}</p>
+    <div class="meta">
+      <a class="btn btn-primary" href="${p.aff}" target="_blank" rel="noopener noreferrer">Buy</a>
+      <button class="copy-btn" data-url="${p.aff}">Copy link</button>
+    </div>
+  `;
+  grid.appendChild(card);
+});
 
     // copy to clipboard for sharing
     document.addEventListener('click', e=>{
@@ -132,6 +135,7 @@ Affiliate Landing Page Template
   -->
 </body>
 </html>
+
 
 
 

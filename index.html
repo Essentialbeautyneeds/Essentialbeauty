@@ -13,38 +13,64 @@ Affiliate Landing Page Template
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>おすすめオーガニック美容アイテム</title>
-  <meta name="description" content="自然由来のオーガニック美容アイテムを厳選。肌と地球にやさしいライフスタイルを提案します。" />
+  <meta name="description" content="オーガニックコスメの魅力とおすすめ商品を紹介。自然由来の優しさで肌も心も健やかに。" />
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    /* --- COLORS & FONT --- */
     :root{
       --bg:#fff8f5;
       --card:#ffffff;
       --accent:#ff9aa2;
       --accent-hover:#ff6f91;
       --muted:#555;
-      --btn-text:#fff;
+      --btn-text:#ffffff;
     }
-    *{box-sizing:border-box}
+    *{box-sizing:border-box;}
     body{
-      font-family:'Quicksand',sans-serif;
+      font-family:'Quicksand', sans-serif;
       background:var(--bg);
       margin:0;
       color:#111;
-      overflow-x:hidden;
+      line-height:1.7;
     }
     header{
-      background:linear-gradient(90deg,#ffd6d1,#ffb3b3);
+      background:linear-gradient(90deg, #ffd6d1, #ffb3b3);
       color:#111;
-      padding:30px 20px;
+      padding:36px 20px;
       text-align:center;
       border-bottom:2px solid #ff9aa2;
     }
     h1{margin:0;font-size:30px;font-weight:700;}
-    p.lead{margin:8px 0 0;font-size:16px;}
-
+    p.lead{margin:8px 0 0;opacity:.95;font-size:16px;}
     .container{max-width:980px;margin:20px auto;padding:0 16px;}
 
-    /* --- CARD GRID --- */
+    /* --- ARTICLE SECTION --- */
+    section.article{
+      background:#fff;
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.06);
+      margin-bottom:40px;
+    }
+    section.article h2{
+      text-align:center;
+      color:#ff6f91;
+      font-size:24px;
+      margin-bottom:20px;
+    }
+    section.article img{
+      width:100%;
+      border-radius:16px;
+      margin:16px 0;
+    }
+    section.article p{
+      margin-bottom:16px;
+      font-size:15px;
+      color:#333;
+    }
+
+    /* --- PRODUCTS --- */
     .grid{
       display:grid;
       grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
@@ -56,110 +82,79 @@ Affiliate Landing Page Template
       border-radius:20px;
       padding:18px;
       box-shadow:0 4px 15px rgba(0,0,0,0.08);
-      transition:transform 0.3s,box-shadow 0.3s;
-      opacity:0;
-      transform:translateY(20px);
-    }
-    .card.show{
-      opacity:1;
-      transform:translateY(0);
-      transition:all 0.6s ease;
+      transition:transform 0.3s, box-shadow 0.3s;
     }
     .card:hover{
       transform:translateY(-6px);
       box-shadow:0 10px 25px rgba(0,0,0,0.15);
     }
     .thumb{
-      width:100%;height:160px;border-radius:16px;overflow:hidden;background:#ffeef0;
-      display:flex;align-items:center;justify-content:center;
+      width:100%;
+      height:160px;
+      border-radius:16px;
+      overflow:hidden;
+      background:#ffeef0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
     }
     .thumb img{width:100%;height:100%;object-fit:cover;}
     .title{font-weight:600;margin:10px 0 6px;font-size:16px;color:#333;}
     .desc{font-size:14px;color:var(--muted);margin:0 0 12px;}
 
-    .btn{display:inline-block;padding:10px 16px;border-radius:12px;text-decoration:none;font-weight:600;font-size:14px;}
-    .btn-primary{background:var(--accent);color:var(--btn-text);transition:background 0.3s;}
+    .btn{
+      display:inline-block;
+      padding:10px 16px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+    }
+    .btn-primary{
+      background:var(--accent);
+      color:var(--btn-text);
+      transition:background 0.3s;
+    }
     .btn-primary:hover{background:var(--accent-hover);}
     .meta{display:flex;gap:8px;align-items:center;}
     .copy-btn{
-      background:#ffe9e7;border-radius:10px;padding:6px 10px;font-size:13px;
-      color:var(--accent);cursor:pointer;transition:background 0.2s;
+      background:#ffe9e7;
+      border-radius:10px;
+      padding:6px 10px;
+      font-size:13px;
+      color:var(--accent);
+      cursor:pointer;
+      transition:background 0.2s;
     }
     .copy-btn:hover{background:#ffd2cd;}
 
-    /* --- ARTICLE SECTION --- */
-    .article-section{
-      margin:60px auto;
-      max-width:960px;
-      line-height:1.8;
-    }
-    .article-section h2{
-      font-size:22px;
+    /* --- FOOTER --- */
+    .footer{
+      margin:36px 0 60px;
+      color:var(--muted);
+      font-size:13px;
       text-align:center;
-      color:#333;
-      margin-bottom:24px;
-      position:relative;
     }
-    .article-section h2::after{
-      content:"";
-      display:block;
-      width:60px;
-      height:3px;
-      background:var(--accent);
-      margin:10px auto 0;
-      border-radius:3px;
-    }
-    .article-block{
-      display:flex;
-      align-items:center;
-      gap:24px;
-      margin-bottom:40px;
-      background:#fff;
-      border-radius:20px;
-      box-shadow:0 4px 15px rgba(0,0,0,0.05);
-      overflow:hidden;
-      padding:20px;
-      opacity:0;
-      transform:translateY(30px);
-    }
-    .article-block.show{
-      opacity:1;
-      transform:translateY(0);
-      transition:all 0.8s ease;
-    }
-    .article-block:nth-child(even){flex-direction:row-reverse;}
-    .article-block img{
-      width:45%;
-      border-radius:16px;
-      object-fit:cover;
-    }
-    .article-text{flex:1;font-size:15px;color:#444;}
 
-    /* --- DISCLOSURE (右下固定) --- */
-    .disclosure{
+    /* --- DISCLOSURE FIXED --- */
+    .disclosure-fixed{
       position:fixed;
-      right:20px;
-      bottom:10px;
-      background:#fff8f5;
-      border-left:3px solid #ffb44d;
+      right:16px;
+      bottom:16px;
+      background:#fff3e6;
+      border-left:4px solid #ffb44d;
       padding:8px 12px;
       border-radius:8px;
-      font-size:11px;
-      color:#555;
-      box-shadow:0 4px 8px rgba(0,0,0,0.1);
-      z-index:10;
+      font-size:10px;
+      color:#444;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      max-width:200px;
+      line-height:1.5;
     }
 
-    .footer{
-      text-align:center;
-      color:#777;
-      font-size:13px;
-      margin:60px 0 40px;
-    }
-
-    @media (max-width:700px){
-      .article-block{flex-direction:column;}
-      .article-block img{width:100%;}
+    @media (max-width:600px){
+      .thumb{height:120px;}
+      section.article{padding:20px;}
     }
   </style>
 </head>
@@ -167,58 +162,32 @@ Affiliate Landing Page Template
   <header>
     <div class="container">
       <h1>おすすめオーガニック美容アイテム</h1>
-      <p class="lead">自然由来のアイテムで肌にやさしいケアを🌿</p>
+      <p class="lead">自然の力で、肌も心もやさしく整える。</p>
     </div>
   </header>
 
   <main class="container">
-    <div class="grid" id="productGrid"></div>
-
-    <section class="article-section">
-      <h2>オーガニックコスメの魅力と効果</h2>
-
-      <div class="article-block">
-        <img src="images/article1.jpg" alt="植物由来成分のイメージ">
-        <div class="article-text">
-          <p>近年注目を集める「オーガニックコスメ」は、天然由来成分を中心に作られた肌にやさしい化粧品です。化学合成成分をできるだけ避け、敏感肌や乾燥肌の方でも安心して使用できるのが特徴です。</p>
-        </div>
-      </div>
-
-      <div class="article-block">
-        <img src="images/article2.jpg" alt="コスメボトルの並んだ写真">
-        <div class="article-text">
-          <p>植物由来の保湿成分やビタミンが豊富に含まれ、肌の潤いと弾力をサポート。毎日のケアで肌のバリア機能を高め、健やかな素肌へと導きます。</p>
-        </div>
-      </div>
-
-      <div class="article-block">
-        <img src="images/article3.jpg" alt="スキンケアを楽しむ女性">
-        <div class="article-text">
-          <p>オーガニックコスメは香りにも特徴があり、天然アロマによるリラックス効果が得られます。スキンケアの時間が“癒しのひととき”に変わります。</p>
-        </div>
-      </div>
-
-      <div class="article-block">
-        <img src="images/article4.jpg" alt="環境にやさしいオーガニック製品">
-        <div class="article-text">
-          <p>また、環境にもやさしいのが魅力。天然素材を使用することで、地球への負担を減らし、サステナブルな暮らしをサポートします。</p>
-        </div>
-      </div>
-
-      <div class="article-block">
-        <img src="images/article5.jpg" alt="ナチュラルビューティーのイメージ">
-        <div class="article-text">
-          <p>肌と心を同時に整えるオーガニックコスメ。ナチュラルな美しさを引き出しながら、安心して長く使えるアイテムです。</p>
-        </div>
-      </div>
+    <section class="article">
+      <h2>オーガニックコスメを選ぶ理由</h2>
+      <img src="images/organic_article1.jpg" alt="オーガニック化粧品イメージ">
+      <p>オーガニックコスメは、自然由来の原料を使った肌にやさしい化粧品です。化学成分を極力排除し、植物エキスや精油など自然の恵みを取り入れています。そのため、敏感肌の方でも安心して使えるのが魅力です。</p>
+      <img src="images/organic_article2.jpg" alt="植物原料の写真">
+      <p>また、オーガニックコスメは肌だけでなく、体全体への負担も少なく、香りや質感が心を穏やかにしてくれます。自然の香りはストレス軽減にもつながり、スキンケアの時間が癒しのひとときになります。</p>
+      <img src="images/organic_article3.jpg" alt="スキンケアをする女性">
+      <p>さらに、環境にもやさしい製法が多く、地球にも配慮したサステナブルな選択です。自分の肌を大切にすることが、自然を守ることにもつながるのです。</p>
+      <img src="images/organic_article4.jpg" alt="ナチュラル素材のコスメ">
+      <p>毎日のケアにオーガニック製品を取り入れることで、肌が本来の力を取り戻し、健やかで美しい状態へと導かれます。</p>
+      <img src="images/organic_article5.jpg" alt="自然とコスメの調和">
     </section>
+
+    <h2 style="text-align:center; color:#ff6f91;">おすすめアイテム</h2>
+    <div class="grid" id="productGrid"></div>
 
     <div class="footer">© 2025 EssentialBeautyNeeds</div>
   </main>
 
-  <div class="disclosure">
-    当サイトのリンクの一部はアフィリエイトリンクです。<br>
-    購入により紹介手数料が支払われる場合があります。
+  <div class="disclosure-fixed">
+    ※当サイトのリンクの一部はアフィリエイトリンクです。購入により紹介手数料が支払われる場合があります。
   </div>
 
   <script>
@@ -227,8 +196,7 @@ Affiliate Landing Page Template
       {id:2,title:'Allna Moisturizer',desc:'肌本来のうるおいを守るオーガニック保湿クリーム。軽やかな使い心地で乾燥を防ぎ、しっとり滑らかな肌に整えます。',img:'images/moist1.jpg',aff:'https://amzn.to/3LtRo51'},
       {id:3,title:'Allna Organic Face Pack',desc:'自然成分をぎゅっと詰めたフェイスパック。肌に潤いを与えながら、透明感とハリを引き出す集中ケア用マスクです。',img:'images/face1.jpg',aff:'https://amzn.to/47czgp2'}
     ];
-
-    const grid=document.getElementById('productGrid');
+    const grid = document.getElementById('productGrid');
     PRODUCTS.forEach(p=>{
       const card=document.createElement('article');card.className='card';
       card.innerHTML=`
@@ -236,41 +204,20 @@ Affiliate Landing Page Template
         <div class="title">${p.title}</div>
         <p class="desc">${p.desc}</p>
         <div class="meta">
-          <a class="btn btn-primary" href="${p.aff}" target="_blank">Buy</a>
+          <a class="btn btn-primary" href="${p.aff}" target="_blank" rel="noopener noreferrer">Buy</a>
           <button class="copy-btn" data-url="${p.aff}">Copy link</button>
         </div>`;
       grid.appendChild(card);
     });
-
-    // コピー機能
     document.addEventListener('click',e=>{
       if(e.target.matches('.copy-btn')){
         const url=e.target.dataset.url;
         navigator.clipboard.writeText(url).then(()=>{
           e.target.textContent='Copied';
           setTimeout(()=>e.target.textContent='Copy link',1200);
-        });
+        }).catch(()=>alert('コピーに失敗しました'));
       }
     });
-
-    // スクロール時のフェードイン
-    const observer=new IntersectionObserver(entries=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          entry.target.classList.add('show');
-          observer.unobserve(entry.target);
-        }
-      });
-    },{threshold:0.1});
-    document.querySelectorAll('.card,.article-block').forEach(el=>observer.observe(el));
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-

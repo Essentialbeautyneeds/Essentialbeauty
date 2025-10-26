@@ -33,7 +33,7 @@ Affiliate Landing Page Template
       font-family:'Quicksand',sans-serif;
       background:var(--bg);
       color:#333;
-      background-image: url('images/bg_petals.png'); /* 花びらパターン */
+      background-image: url('images/bg_petals.png');
       background-repeat:repeat;
       background-size:120px;
     }
@@ -110,10 +110,8 @@ Affiliate Landing Page Template
 
     .meta{
       display:flex;
-      gap:12px;
       justify-content:center;
       align-items:center;
-      flex-wrap:wrap;
     }
     .btn{
       display:inline-block;
@@ -129,16 +127,6 @@ Affiliate Landing Page Template
     .btn:hover{
       background:linear-gradient(90deg,#f48b8b,#f27c7c);
     }
-    .copy-btn{
-      background:#ffe9e7;
-      border-radius:12px;
-      padding:6px 10px;
-      font-size:13px;
-      color:var(--accent);
-      cursor:pointer;
-      transition:.3s;
-    }
-    .copy-btn:hover{background:#ffd2cd;}
 
     /* 💬 Disclosure (右下固定) */
     .disclosure-fixed{
@@ -267,20 +255,9 @@ Affiliate Landing Page Template
         <p class="desc">${p.desc}</p>
         <div class="meta">
           <a class="btn" href="${p.aff}" target="_blank" rel="noopener noreferrer">購入して試してみる</a>
-          <button class="copy-btn" data-url="${p.aff}">Copy</button>
         </div>
       `;
       grid.appendChild(card);
-    });
-
-    document.addEventListener('click',e=>{
-      if(e.target.matches('.copy-btn')){
-        const url=e.target.dataset.url;
-        navigator.clipboard.writeText(url).then(()=>{
-          e.target.textContent='Copied';
-          setTimeout(()=>e.target.textContent='Copy',1200);
-        });
-      }
     });
 
     // Article fade-in on scroll
@@ -297,3 +274,4 @@ Affiliate Landing Page Template
   </script>
 </body>
 </html>
+

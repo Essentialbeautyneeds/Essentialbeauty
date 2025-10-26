@@ -90,13 +90,14 @@ Affiliate Landing Page Template
     PRODUCTS.forEach(p=>{
       const card = document.createElement('article'); card.className='card';
       card.innerHTML = `
-        <div class=\"thumb\">Image<br>(${p.title})</div>
-        <div class=\"title\">${p.title}</div>
-        <p class=\"desc\">${p.desc}</p>
-        <div class=\"meta\">
-          <a class=\"btn btn-primary\" href=\"${p.aff}\" target=\"_blank\" rel=\"noopener noreferrer\">Buy</a>
-          <button class=\"copy-btn\" data-url=\"${p.aff}\">Copy link</button>
-        </div>`;
+       card.innerHTML = `
+  <div class="thumb"><img src="${p.img}" alt="${p.title}" style="width:100%;height:100%;object-fit:cover;border-radius:8px;"></div>
+  <div class="title">${p.title}</div>
+  <p class="desc">${p.desc}</p>
+  <div class="meta">
+    <a class="btn btn-primary" href="${p.aff}" target="_blank" rel="noopener noreferrer">Buy</a>
+    <button class="copy-btn" data-url="${p.aff}">Copy link</button>
+  </div>`;
       grid.appendChild(card);
     });
 
@@ -131,6 +132,7 @@ Affiliate Landing Page Template
   -->
 </body>
 </html>
+
 
 
 

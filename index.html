@@ -12,12 +12,8 @@ Affiliate Landing Page Template
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-  <!-- 🔹 SEO 最適化 -->
-  <title>オーガニック・ナチュラル化粧品｜美肌・アンチエイジングにおすすめの自然派コスメ特集</title>
-  <meta name="description" content="肌に優しいオーガニック化粧品・ナチュラルコスメを厳選。保湿・美肌・アンチエイジング・若返り・健康的な美容ケアをサポートする自然派クリームやスキンケア商品を紹介しています。" />
-  <meta name="keywords" content="オーガニック, ナチュラル, 自然, 美肌, アンチエイジング, 若返り, 健康, 美容, コスメ, 化粧品, 保湿, クリーム" />
-
+  <title>おすすめオーガニック美容アイテム</title>
+  <meta name="description" content="自然由来のオーガニック美容アイテムを厳選。購入はアフィリエイトリンク経由でサポートできます。" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- Google tag (gtag.js) -->
@@ -30,7 +26,6 @@ Affiliate Landing Page Template
   </script>
 
   <style>
-    /* --- 既存のスタイルはそのまま --- */
     :root{
       --bg:#fff8f8;
       --card:#ffffff;
@@ -43,12 +38,31 @@ Affiliate Landing Page Template
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Quicksand',sans-serif;background:var(--bg);color:#333;}
 
-    header{position:relative;background:linear-gradient(90deg,#f7e7e8,#f9d9d7);border-bottom:3px solid #e6b7b3;text-align:center;color:#503535;padding:80px 20px;background-image:url('images/header.jpg');background-size:cover;background-position:center;background-blend-mode:lighten;}
-    header::after{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(255,255,255,0.6);backdrop-filter:blur(2px);}
-    header .container{position:relative;z-index:2;}
+    header{
+      position:relative;
+      background:linear-gradient(90deg,#f7e7e8,#f9d9d7);
+      border-bottom:3px solid #e6b7b3;
+      text-align:center;
+      color:#503535;
+      padding:80px 20px;
+      background-image:url('images/header.jpg');
+      background-size:cover;
+      background-position:center;
+      background-blend-mode:lighten;
+    }
+    header::after{
+      content:"";
+      position:absolute;
+      top:0;left:0;right:0;bottom:0;
+      background:rgba(255,255,255,0.6);
+      backdrop-filter:blur(2px);
+    }
+    header .container{position:relative; z-index:2;}
     h1{font-family:'Playfair Display',serif;font-size:38px;letter-spacing:1px;margin-bottom:8px;}
     p.lead{font-size:17px;color:#5a4545;}
+
     .container{max-width:980px;margin:30px auto;padding:0 16px;}
+
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;margin-top:40px;}
     .card{background:var(--card);border-radius:18px;padding:18px;box-shadow:0 5px 20px rgba(0,0,0,0.08);transition:.3s;}
     .card:hover{transform:translateY(-5px);box-shadow:0 8px 28px rgba(0,0,0,0.12);}
@@ -58,16 +72,25 @@ Affiliate Landing Page Template
     .desc{font-size:14px;color:var(--muted);margin:0 0 12px;}
     .btn{display:block;text-align:center;width:100%;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;font-size:14px;background:var(--accent);color:var(--btn-text);transition:.3s;}
     .btn:hover{background:var(--accent-hover);}
-    .disclosure-fixed{position:fixed;right:10px;bottom:10px;background:rgba(255,255,255,0.8);border-left:3px solid #ffb4b4;border-radius:8px;font-size:10px;color:#444;padding:6px 10px;max-width:180px;box-shadow:0 3px 10px rgba(0,0,0,0.1);z-index:99;}
+
+    .disclosure-fixed{
+      position:fixed;right:10px;bottom:10px;background:rgba(255,255,255,0.8);
+      border-left:3px solid #ffb4b4;border-radius:8px;font-size:10px;color:#444;
+      padding:6px 10px;max-width:180px;box-shadow:0 3px 10px rgba(0,0,0,0.1);z-index:99;
+    }
+
     .article{margin-top:60px;}
-    .article h2{font-family:'Playfair Display',serif;font-size:28px;margin-bottom:20px;color:#503535;text-align:center;}
+    .article h2{text-align:center;font-family:'Playfair Display',serif;font-size:28px;color:#503535;margin-bottom:20px;}
     .article p{font-size:15px;line-height:1.6;color:#444;margin-bottom:20px;}
     .article-block{display:flex;flex-wrap:wrap;margin-bottom:40px;gap:16px;}
     .article-block img{width:48%;border-radius:14px;object-fit:cover;}
     .article-block:nth-child(even) img{order:2;}
+
     .section-alt{background:var(--section-bg);padding:60px 0;margin-top:60px;}
     .section-alt h2{text-align:center;font-family:'Playfair Display',serif;font-size:28px;color:#503535;margin-bottom:30px;}
+
     footer{text-align:center;font-size:13px;color:#888;margin:60px 0 30px;}
+
     @media(max-width:600px){.article-block img{width:100% !important;order:0 !important;}}
   </style>
 </head>
@@ -80,11 +103,12 @@ Affiliate Landing Page Template
   </header>
 
   <main class="container">
+    <!-- Top Product Grid -->
     <div class="grid" id="productGrid"></div>
 
+    <!-- ARTICLE SECTION -->
     <section class="article">
       <h2>オーガニックコスメを使うメリット</h2>
-
       <div class="article-block">
         <img src="images/article1.jpg" alt="オーガニック原料">
         <p>オーガニックコスメは自然由来の原料を使用することで、肌に優しく刺激が少ないのが特徴です。敏感肌でも使いやすく、毎日のスキンケアに安心感をもたらします。</p>
@@ -108,6 +132,7 @@ Affiliate Landing Page Template
     </section>
   </main>
 
+  <!-- 🌿 SECOND PRODUCT SECTION -->
   <section class="section-alt">
     <div class="container">
       <h2>おすすめオーガニックケアアイテム</h2>
@@ -122,16 +147,18 @@ Affiliate Landing Page Template
   <footer>© 2025 EssentialBeautyNeeds</footer>
 
   <script>
+    /* --- Main Products --- */
     const PRODUCTS = [
       {title:'N Organic Basic',desc:'自然由来成分を贅沢に配合したスキンケア。肌に優しく、うるおいを与えながら健やかな素肌へ導きます。',img:'images/skin1.jpg',aff:'https://amzn.to/479cQEZ'},
       {title:'Allna Moisturizer',desc:'肌本来のうるおいを守るオーガニック保湿クリーム。軽やかな使い心地で乾燥を防ぎ、しっとり滑らかな肌に整えます。',img:'images/moist1.jpg',aff:'https://amzn.to/3LtRo51'},
       {title:'Allna Organic Face Pack',desc:'自然成分をぎゅっと詰めたフェイスパック。肌に潤いを与えながら透明感とハリを引き出す集中ケア用マスクです。',img:'images/face1.jpg',aff:'https://amzn.to/47czgp2'}
     ];
 
+    /* --- Care Products (ブラッシュアップ文章) --- */
     const CARES = [
-      {title:'Eternum Lip Serum（リップセラム）',desc:'ヒト幹細胞培養上清液を配合したリップケア。保湿と血色感を与え、ふっくらとした唇を実現。敏感肌にもやさしい処方。',img:'images/lip1.jpg',aff:'https://amzn.to/4qvw5jJ'},
-      {title:'Fafra Organic The Hand Cream',desc:'高保湿でもさらっと仕上がる日本製ハンドクリーム。植物由来成分91％配合で、優しく手肌を包み込みます。',img:'images/hand1.jpg',aff:'https://amzn.to/4hr6WCw'},
-      {title:'N Organic Vie アイクリーム',desc:'バクチオール配合でハリと弾力を与えるアイクリーム。植物由来エキスが乾燥小じわをケアし、明るい目元へ導きます。',img:'images/eye1.jpg',aff:'https://amzn.to/4oJeiUA'}
+      {title:'Eternum Lip Serum（リップセラム）',desc:'ヒト幹細胞培養上清液配合のオーガニックリップセラム。唇の乾燥や縦じわを防ぎ、保湿と血色感を同時にサポート。敏感肌にも安心のナチュラル処方で、ふっくら美しい唇に導きます。美容液感覚のリップケアで、アンチエイジングケアも可能です。',img:'images/lip1.jpg',aff:'https://amzn.to/4qvw5jJ'},
+      {title:'Fafra Organic The Hand Cream',desc:'世界基準のコスモスオーガニック認証取得、日本製オーガニックハンドクリーム。植物由来成分91％で、乾燥や肌荒れを防ぎつつしっとりなめらかな手肌に。高保湿なのにべたつかず、毎日のスキンケアに最適。ナチュラル成分で美肌を守り、健康的な手元へ導きます。',img:'images/hand1.jpg',aff:'https://amzn.to/4hr6WCw'},
+      {title:'N Organic Vie アイクリーム',desc:'植物由来のバクチオール配合、オーガニックアイクリーム。乾燥や小じわをケアし、ハリと弾力のある目元へ導きます。保湿力に優れたナチュラル成分が肌を整え、美肌効果とアンチエイジングを両立。毎日のスキンケアで自然な輝きと若々しさをサポートします。',img:'images/eye1.jpg',aff:'https://amzn.to/4oJeiUA'}
     ];
 
     const grid=document.getElementById('productGrid');
@@ -162,5 +189,4 @@ Affiliate Landing Page Template
   </script>
 </body>
 </html>
-
 

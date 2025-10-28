@@ -12,21 +12,25 @@ Affiliate Landing Page Template
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>おすすめオーガニック美容アイテム</title>
-  <meta name="description" content="自然由来のオーガニック美容アイテムを厳選。購入はアフィリエイトリンク経由でサポートできます。" />
+
+  <!-- 🔹 SEO 最適化 -->
+  <title>オーガニック・ナチュラル化粧品｜美肌・アンチエイジングにおすすめの自然派コスメ特集</title>
+  <meta name="description" content="肌に優しいオーガニック化粧品・ナチュラルコスメを厳選。保湿・美肌・アンチエイジング・若返り・健康的な美容ケアをサポートする自然派クリームやスキンケア商品を紹介しています。" />
+  <meta name="keywords" content="オーガニック, ナチュラル, 自然, 美肌, アンチエイジング, 若返り, 健康, 美容, コスメ, 化粧品, 保湿, クリーム" />
+
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2HGEPHVZYY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HGEPHVZYY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2HGEPHVZYY');
+  </script>
 
-  gtag('config', 'G-2HGEPHVZYY');
-</script>
-  
   <style>
+    /* --- 既存のスタイルはそのまま --- */
     :root{
       --bg:#fff8f8;
       --card:#ffffff;
@@ -37,165 +41,34 @@ Affiliate Landing Page Template
       --section-bg:#fff9f9;
     }
     *{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family:'Quicksand',sans-serif;
-      background:var(--bg);
-      color:#333;
-    }
+    body{font-family:'Quicksand',sans-serif;background:var(--bg);color:#333;}
 
-    /* 🌸 HEADER */
-    header{
-      position:relative;
-      background:linear-gradient(90deg,#f7e7e8,#f9d9d7);
-      border-bottom:3px solid #e6b7b3;
-      text-align:center;
-      color:#503535;
-      padding:80px 20px;
-      background-image:url('images/header.jpg');
-      background-size:cover;
-      background-position:center;
-      background-blend-mode:lighten;
-    }
-    header::after{
-      content:"";
-      position:absolute;
-      top:0;left:0;right:0;bottom:0;
-      background:rgba(255,255,255,0.6);
-      backdrop-filter:blur(2px);
-    }
-    header .container{
-      position:relative;
-      z-index:2;
-    }
-    h1{
-      font-family:'Playfair Display',serif;
-      font-size:38px;
-      letter-spacing:1px;
-      margin-bottom:8px;
-    }
-    p.lead{
-      font-size:17px;
-      color:#5a4545;
-    }
-
+    header{position:relative;background:linear-gradient(90deg,#f7e7e8,#f9d9d7);border-bottom:3px solid #e6b7b3;text-align:center;color:#503535;padding:80px 20px;background-image:url('images/header.jpg');background-size:cover;background-position:center;background-blend-mode:lighten;}
+    header::after{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(255,255,255,0.6);backdrop-filter:blur(2px);}
+    header .container{position:relative;z-index:2;}
+    h1{font-family:'Playfair Display',serif;font-size:38px;letter-spacing:1px;margin-bottom:8px;}
+    p.lead{font-size:17px;color:#5a4545;}
     .container{max-width:980px;margin:30px auto;padding:0 16px;}
-
-    /* --- PRODUCTS --- */
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
-      gap:22px;
-      margin-top:40px;
-    }
-    .card{
-      background:var(--card);
-      border-radius:18px;
-      padding:18px;
-      box-shadow:0 5px 20px rgba(0,0,0,0.08);
-      transition:.3s;
-    }
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;margin-top:40px;}
+    .card{background:var(--card);border-radius:18px;padding:18px;box-shadow:0 5px 20px rgba(0,0,0,0.08);transition:.3s;}
     .card:hover{transform:translateY(-5px);box-shadow:0 8px 28px rgba(0,0,0,0.12);}
-    .thumb{
-      width:100%;
-      height:210px;
-      border-radius:14px;
-      overflow:hidden;
-      background:#ffeef0;
-    }
-    .thumb img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
+    .thumb{width:100%;height:210px;border-radius:14px;overflow:hidden;background:#ffeef0;}
+    .thumb img{width:100%;height:100%;object-fit:cover;}
     .title{font-weight:600;margin:10px 0 6px;font-size:16px;color:#333;}
     .desc{font-size:14px;color:var(--muted);margin:0 0 12px;}
-    .btn{
-      display:block;
-      text-align:center;
-      width:100%;
-      padding:10px 14px;
-      border-radius:10px;
-      text-decoration:none;
-      font-weight:600;
-      font-size:14px;
-      background:var(--accent);
-      color:var(--btn-text);
-      transition:.3s;
-    }
+    .btn{display:block;text-align:center;width:100%;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;font-size:14px;background:var(--accent);color:var(--btn-text);transition:.3s;}
     .btn:hover{background:var(--accent-hover);}
-
-    /* 💬 Disclosure (右下固定) */
-    .disclosure-fixed{
-      position:fixed;
-      right:10px;
-      bottom:10px;
-      background:rgba(255,255,255,0.8);
-      border-left:3px solid #ffb4b4;
-      border-radius:8px;
-      font-size:10px;
-      color:#444;
-      padding:6px 10px;
-      max-width:180px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.1);
-      z-index:99;
-    }
-
-    /* --- ARTICLE SECTION --- */
-    .article{
-      margin-top:60px;
-    }
-    .article h2{
-      font-family:'Playfair Display',serif;
-      font-size:28px;
-      margin-bottom:20px;
-      color:#503535;
-      text-align:center;
-    }
-    .article p{
-      font-size:15px;
-      line-height:1.6;
-      color:#444;
-      margin-bottom:20px;
-    }
-    .article-block{
-      display:flex;
-      flex-wrap:wrap;
-      margin-bottom:40px;
-      gap:16px;
-    }
-    .article-block img{
-      width:48%;
-      border-radius:14px;
-      object-fit:cover;
-    }
-    .article-block:nth-child(even) img{
-      order:2;
-    }
-
-    /* 🌿 SECOND PRODUCT SECTION */
-    .section-alt{
-      background:var(--section-bg);
-      padding:60px 0;
-      margin-top:60px;
-    }
-    .section-alt h2{
-      text-align:center;
-      font-family:'Playfair Display',serif;
-      font-size:28px;
-      color:#503535;
-      margin-bottom:30px;
-    }
-
-    footer{
-      text-align:center;
-      font-size:13px;
-      color:#888;
-      margin:60px 0 30px;
-    }
-
-    @media(max-width:600px){
-      .article-block img{width:100% !important;order:0 !important;}
-    }
+    .disclosure-fixed{position:fixed;right:10px;bottom:10px;background:rgba(255,255,255,0.8);border-left:3px solid #ffb4b4;border-radius:8px;font-size:10px;color:#444;padding:6px 10px;max-width:180px;box-shadow:0 3px 10px rgba(0,0,0,0.1);z-index:99;}
+    .article{margin-top:60px;}
+    .article h2{font-family:'Playfair Display',serif;font-size:28px;margin-bottom:20px;color:#503535;text-align:center;}
+    .article p{font-size:15px;line-height:1.6;color:#444;margin-bottom:20px;}
+    .article-block{display:flex;flex-wrap:wrap;margin-bottom:40px;gap:16px;}
+    .article-block img{width:48%;border-radius:14px;object-fit:cover;}
+    .article-block:nth-child(even) img{order:2;}
+    .section-alt{background:var(--section-bg);padding:60px 0;margin-top:60px;}
+    .section-alt h2{text-align:center;font-family:'Playfair Display',serif;font-size:28px;color:#503535;margin-bottom:30px;}
+    footer{text-align:center;font-size:13px;color:#888;margin:60px 0 30px;}
+    @media(max-width:600px){.article-block img{width:100% !important;order:0 !important;}}
   </style>
 </head>
 <body>
@@ -207,10 +80,8 @@ Affiliate Landing Page Template
   </header>
 
   <main class="container">
-    <!-- Top Product Grid -->
     <div class="grid" id="productGrid"></div>
 
-    <!-- ARTICLE SECTION -->
     <section class="article">
       <h2>オーガニックコスメを使うメリット</h2>
 
@@ -218,22 +89,18 @@ Affiliate Landing Page Template
         <img src="images/article1.jpg" alt="オーガニック原料">
         <p>オーガニックコスメは自然由来の原料を使用することで、肌に優しく刺激が少ないのが特徴です。敏感肌でも使いやすく、毎日のスキンケアに安心感をもたらします。</p>
       </div>
-
       <div class="article-block">
         <img src="images/article2.jpg" alt="肌への効果">
         <p>肌への効果として、保湿力や抗酸化作用が期待できます。自然成分が肌本来のバリア機能をサポートし、ハリや透明感を保ちます。長期的に使用することで健やかな素肌を維持できます。</p>
       </div>
-
       <div class="article-block">
         <img src="images/article3.jpg" alt="体への効果">
         <p>体への影響も配慮されており、化学成分の使用が少ないため、アレルギーリスクを抑えられます。香料や保存料の負担も軽減され、心地よくスキンケアを楽しむことができます。</p>
       </div>
-
       <div class="article-block">
         <img src="images/article4.jpg" alt="自然派の美">
         <p>自然派原料を活かした製品は、環境や生態系にも優しい選択です。サステナブルなライフスタイルに合わせて、地球にも肌にもやさしい美容法を実践できます。</p>
       </div>
-
       <div class="article-block">
         <img src="images/article5.jpg" alt="オーガニック美容習慣">
         <p>オーガニックコスメを取り入れることで、日常の美容習慣が心地よく充実します。肌だけでなく、使用するたびに気分も高まり、自然の恵みを感じながら自分を大切にする時間になります。</p>
@@ -241,7 +108,6 @@ Affiliate Landing Page Template
     </section>
   </main>
 
-  <!-- 🌿 SECOND PRODUCT SECTION -->
   <section class="section-alt">
     <div class="container">
       <h2>おすすめオーガニックケアアイテム</h2>
@@ -256,14 +122,12 @@ Affiliate Landing Page Template
   <footer>© 2025 EssentialBeautyNeeds</footer>
 
   <script>
-    /* --- Main Products --- */
     const PRODUCTS = [
       {title:'N Organic Basic',desc:'自然由来成分を贅沢に配合したスキンケア。肌に優しく、うるおいを与えながら健やかな素肌へ導きます。',img:'images/skin1.jpg',aff:'https://amzn.to/479cQEZ'},
       {title:'Allna Moisturizer',desc:'肌本来のうるおいを守るオーガニック保湿クリーム。軽やかな使い心地で乾燥を防ぎ、しっとり滑らかな肌に整えます。',img:'images/moist1.jpg',aff:'https://amzn.to/3LtRo51'},
       {title:'Allna Organic Face Pack',desc:'自然成分をぎゅっと詰めたフェイスパック。肌に潤いを与えながら透明感とハリを引き出す集中ケア用マスクです。',img:'images/face1.jpg',aff:'https://amzn.to/47czgp2'}
     ];
 
-    /* --- Care Products --- */
     const CARES = [
       {title:'Eternum Lip Serum（リップセラム）',desc:'ヒト幹細胞培養上清液を配合したリップケア。保湿と血色感を与え、ふっくらとした唇を実現。敏感肌にもやさしい処方。',img:'images/lip1.jpg',aff:'https://amzn.to/4qvw5jJ'},
       {title:'Fafra Organic The Hand Cream',desc:'高保湿でもさらっと仕上がる日本製ハンドクリーム。植物由来成分91％配合で、優しく手肌を包み込みます。',img:'images/hand1.jpg',aff:'https://amzn.to/4hr6WCw'},
@@ -298,4 +162,5 @@ Affiliate Landing Page Template
   </script>
 </body>
 </html>
+
 

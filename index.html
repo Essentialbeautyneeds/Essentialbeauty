@@ -12,8 +12,10 @@ Affiliate Landing Page Template
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>おすすめオーガニック美容アイテム</title>
-  <meta name="description" content="自然由来のオーガニック美容アイテムを厳選。購入はアフィリエイトリンク経由でサポートできます。" />
+  <title>オーガニック美容アイテムで美肌と若返りケア｜おすすめコスメ</title>
+  <meta name="description" content="自然由来のオーガニック美容アイテムを厳選紹介。リップ、ハンドクリーム、アイクリームなど肌にやさしいコスメで保湿・アンチエイジング・健康ケアをサポート。購入はアフィリエイトリンク経由で可能です。" />
+  <meta name="keywords" content="オーガニック, ナチュラル, 自然, 美肌, アンチエイジング, 若返り, 健康, 美容, コスメ, 化粧品, 保湿, クリーム">
+
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- Google tag (gtag.js) -->
@@ -36,8 +38,13 @@ Affiliate Landing Page Template
       --section-bg:#fff9f9;
     }
     *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Quicksand',sans-serif;background:var(--bg);color:#333;}
+    body{
+      font-family:'Quicksand',sans-serif;
+      background:var(--bg);
+      color:#333;
+    }
 
+    /* 🌸 HEADER */
     header{
       position:relative;
       background:linear-gradient(90deg,#f7e7e8,#f9d9d7);
@@ -57,48 +64,146 @@ Affiliate Landing Page Template
       background:rgba(255,255,255,0.6);
       backdrop-filter:blur(2px);
     }
-    header .container{position:relative; z-index:2;}
-    h1{font-family:'Playfair Display',serif;font-size:38px;letter-spacing:1px;margin-bottom:8px;}
-    p.lead{font-size:17px;color:#5a4545;}
+    header .container{
+      position:relative;
+      z-index:2;
+    }
+    h1{
+      font-family:'Playfair Display',serif;
+      font-size:38px;
+      letter-spacing:1px;
+      margin-bottom:8px;
+    }
+    p.lead{
+      font-size:17px;
+      color:#5a4545;
+    }
 
     .container{max-width:980px;margin:30px auto;padding:0 16px;}
 
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;margin-top:40px;}
-    .card{background:var(--card);border-radius:18px;padding:18px;box-shadow:0 5px 20px rgba(0,0,0,0.08);transition:.3s;}
+    /* --- PRODUCTS --- */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+      gap:22px;
+      margin-top:40px;
+    }
+    .card{
+      background:var(--card);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+      transition:.3s;
+    }
     .card:hover{transform:translateY(-5px);box-shadow:0 8px 28px rgba(0,0,0,0.12);}
-    .thumb{width:100%;height:210px;border-radius:14px;overflow:hidden;background:#ffeef0;}
-    .thumb img{width:100%;height:100%;object-fit:cover;}
+    .thumb{
+      width:100%;
+      height:240px;
+      border-radius:14px;
+      overflow:hidden;
+      background:#ffeef0;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
     .title{font-weight:600;margin:10px 0 6px;font-size:16px;color:#333;}
     .desc{font-size:14px;color:var(--muted);margin:0 0 12px;}
-    .btn{display:block;text-align:center;width:100%;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;font-size:14px;background:var(--accent);color:var(--btn-text);transition:.3s;}
+    .btn{
+      display:block;
+      text-align:center;
+      width:100%;
+      padding:10px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+      background:var(--accent);
+      color:var(--btn-text);
+      transition:.3s;
+    }
     .btn:hover{background:var(--accent-hover);}
 
+    /* 💬 Disclosure (右下固定) */
     .disclosure-fixed{
-      position:fixed;right:10px;bottom:10px;background:rgba(255,255,255,0.8);
-      border-left:3px solid #ffb4b4;border-radius:8px;font-size:10px;color:#444;
-      padding:6px 10px;max-width:180px;box-shadow:0 3px 10px rgba(0,0,0,0.1);z-index:99;
+      position:fixed;
+      right:10px;
+      bottom:10px;
+      background:rgba(255,255,255,0.8);
+      border-left:3px solid #ffb4b4;
+      border-radius:8px;
+      font-size:10px;
+      color:#444;
+      padding:6px 10px;
+      max-width:180px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.1);
+      z-index:99;
     }
 
-    .article{margin-top:60px;}
-    .article h2{text-align:center;font-family:'Playfair Display',serif;font-size:28px;color:#503535;margin-bottom:20px;}
-    .article p{font-size:15px;line-height:1.6;color:#444;margin-bottom:20px;}
-    .article-block{display:flex;flex-wrap:wrap;margin-bottom:40px;gap:16px;}
-    .article-block img{width:48%;border-radius:14px;object-fit:cover;}
-    .article-block:nth-child(even) img{order:2;}
+    /* --- ARTICLE SECTION --- */
+    .article{
+      margin-top:60px;
+    }
+    .article h2{
+      font-family:'Playfair Display',serif;
+      font-size:28px;
+      margin-bottom:20px;
+      color:#503535;
+      text-align:center;
+    }
+    .article p{
+      font-size:15px;
+      line-height:1.6;
+      color:#444;
+      margin-bottom:20px;
+    }
+    .article-block{
+      display:flex;
+      flex-wrap:wrap;
+      margin-bottom:40px;
+      gap:16px;
+    }
+    .article-block img{
+      width:48%;
+      border-radius:14px;
+      object-fit:cover;
+    }
+    .article-block:nth-child(even) img{
+      order:2;
+    }
 
-    .section-alt{background:var(--section-bg);padding:60px 0;margin-top:60px;}
-    .section-alt h2{text-align:center;font-family:'Playfair Display',serif;font-size:28px;color:#503535;margin-bottom:30px;}
+    /* 🌿 SECOND PRODUCT SECTION */
+    .section-alt{
+      background:var(--section-bg);
+      padding:60px 0;
+      margin-top:60px;
+    }
+    .section-alt h2{
+      text-align:center;
+      font-family:'Playfair Display',serif;
+      font-size:28px;
+      color:#503535;
+      margin-bottom:30px;
+    }
 
-    footer{text-align:center;font-size:13px;color:#888;margin:60px 0 30px;}
+    footer{
+      text-align:center;
+      font-size:13px;
+      color:#888;
+      margin:60px 0 30px;
+    }
 
-    @media(max-width:600px){.article-block img{width:100% !important;order:0 !important;}}
+    @media(max-width:600px){
+      .article-block img{width:100% !important;order:0 !important;}
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="container">
       <h1>おすすめオーガニック美容アイテム</h1>
-      <p class="lead">心と肌にやさしい、自然派の贅沢ケアを。</p>
+      <p class="lead">心と肌にやさしい、自然派の贅沢ケアで美肌・アンチエイジング。</p>
     </div>
   </header>
 
@@ -109,25 +214,30 @@ Affiliate Landing Page Template
     <!-- ARTICLE SECTION -->
     <section class="article">
       <h2>オーガニックコスメを使うメリット</h2>
+
       <div class="article-block">
         <img src="images/article1.jpg" alt="オーガニック原料">
-        <p>オーガニックコスメは自然由来の原料を使用することで、肌に優しく刺激が少ないのが特徴です。敏感肌でも使いやすく、毎日のスキンケアに安心感をもたらします。</p>
+        <p>自然由来のオーガニック原料を使用することで、肌への刺激を抑え、敏感肌にも安心して使えます。毎日のスキンケアに心地よさと健康的な美肌をもたらします。</p>
       </div>
+
       <div class="article-block">
         <img src="images/article2.jpg" alt="肌への効果">
-        <p>肌への効果として、保湿力や抗酸化作用が期待できます。自然成分が肌本来のバリア機能をサポートし、ハリや透明感を保ちます。長期的に使用することで健やかな素肌を維持できます。</p>
+        <p>保湿力や抗酸化作用に優れ、肌のハリや透明感をサポート。継続的に使用することで、健やかで若々しい素肌を維持できます。</p>
       </div>
+
       <div class="article-block">
         <img src="images/article3.jpg" alt="体への効果">
-        <p>体への影響も配慮されており、化学成分の使用が少ないため、アレルギーリスクを抑えられます。香料や保存料の負担も軽減され、心地よくスキンケアを楽しむことができます。</p>
+        <p>化学成分を抑えた低刺激設計で、アレルギーリスクを軽減。香料や保存料の負担も少なく、体にもやさしい美容習慣が可能です。</p>
       </div>
+
       <div class="article-block">
         <img src="images/article4.jpg" alt="自然派の美">
-        <p>自然派原料を活かした製品は、環境や生態系にも優しい選択です。サステナブルなライフスタイルに合わせて、地球にも肌にもやさしい美容法を実践できます。</p>
+        <p>自然派原料を活かした製品は、環境にも配慮。サステナブルなライフスタイルを実践しながら、美しく健康的な肌を育てられます。</p>
       </div>
+
       <div class="article-block">
         <img src="images/article5.jpg" alt="オーガニック美容習慣">
-        <p>オーガニックコスメを取り入れることで、日常の美容習慣が心地よく充実します。肌だけでなく、使用するたびに気分も高まり、自然の恵みを感じながら自分を大切にする時間になります。</p>
+        <p>オーガニックコスメを取り入れることで、日常の美容習慣が充実。肌だけでなく心も潤い、自然の恵みを感じながら自分を大切にする時間になります。</p>
       </div>
     </section>
   </main>
@@ -154,11 +264,11 @@ Affiliate Landing Page Template
       {title:'Allna Organic Face Pack',desc:'自然成分をぎゅっと詰めたフェイスパック。肌に潤いを与えながら透明感とハリを引き出す集中ケア用マスクです。',img:'images/face1.jpg',aff:'https://amzn.to/47czgp2'}
     ];
 
-    /* --- Care Products (ブラッシュアップ文章) --- */
+    /* --- Care Products --- */
     const CARES = [
-      {title:'Eternum Lip Serum（リップセラム）',desc:'ヒト幹細胞培養上清液配合のオーガニックリップセラム。唇の乾燥や縦じわを防ぎ、保湿と血色感を同時にサポート。敏感肌にも安心のナチュラル処方で、ふっくら美しい唇に導きます。美容液感覚のリップケアで、アンチエイジングケアも可能です。',img:'images/lip1.jpg',aff:'https://amzn.to/4qvw5jJ'},
-      {title:'Fafra Organic The Hand Cream',desc:'世界基準のコスモスオーガニック認証取得、日本製オーガニックハンドクリーム。植物由来成分91％で、乾燥や肌荒れを防ぎつつしっとりなめらかな手肌に。高保湿なのにべたつかず、毎日のスキンケアに最適。ナチュラル成分で美肌を守り、健康的な手元へ導きます。',img:'images/hand1.jpg',aff:'https://amzn.to/4hr6WCw'},
-      {title:'N Organic Vie アイクリーム',desc:'植物由来のバクチオール配合、オーガニックアイクリーム。乾燥や小じわをケアし、ハリと弾力のある目元へ導きます。保湿力に優れたナチュラル成分が肌を整え、美肌効果とアンチエイジングを両立。毎日のスキンケアで自然な輝きと若々しさをサポートします。',img:'images/eye1.jpg',aff:'https://amzn.to/4oJeiUA'}
+      {title:'Eternum Lip Serum（リップセラム）',desc:'ヒト幹細胞培養上清液を配合したリップケア。唇に潤いと血色感を与え、ふっくらした口元を実現。敏感肌にも安心の美容液です。',img:'images/lip1.jpg',aff:'https://amzn.to/4qvw5jJ'},
+      {title:'Fafra Organic The Hand Cream',desc:'高保湿でさらっと仕上がる日本製ハンドクリーム。植物由来成分91％配合で、手肌を優しく包み込み、しっとり健康的に保ちます。',img:'images/hand1.jpg',aff:'https://amzn.to/4hr6WCw'},
+      {title:'N Organic Vie アイクリーム',desc:'バクチオール配合で乾燥小じわやハリ不足をケア。植物由来エキスが目元に潤いと弾力を与え、若々しい印象へ導くアイクリームです。',img:'images/eye1.jpg',aff:'https://amzn.to/4oJeiUA'}
     ];
 
     const grid=document.getElementById('productGrid');

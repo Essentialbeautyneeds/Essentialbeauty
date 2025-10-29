@@ -59,7 +59,7 @@ p.lead {
 }
 .article img.hero {
   width: 100%;
-  max-height: 400px;
+  max-height: 450px;
   object-fit: cover;
   border-radius: 18px;
   margin-bottom: 30px;
@@ -82,7 +82,7 @@ p.lead {
 }
 .product-card img {
   width: 100%;
-  height: 480px; /* 高さを2倍に */
+  height: 420px;
   border-radius: 14px;
   object-fit: cover;
   margin-bottom: 15px;
@@ -133,13 +133,31 @@ p.lead {
   font-size: 14px;
   color: #333;
   margin-bottom: 10px;
-  text-align: left;
 }
 .review-card .name {
   font-weight: 600;
   color: #555;
   margin-top: 5px;
-  text-align: right;
+}
+
+/* 🌿 おすすめポイント */
+.tips {
+  text-align: left;
+  background: #fff;
+  border-top: 1px solid #f2cccc;
+  margin-top: 18px;
+  padding-top: 12px;
+}
+.tips h4 {
+  font-size: 14px;
+  color: #c06262;
+  margin-bottom: 6px;
+}
+.tips ul {
+  font-size: 13px;
+  color: #555;
+  margin-left: 18px;
+  list-style: "🌿 ";
 }
 
 footer {
@@ -188,17 +206,20 @@ footer {
         <img src="images/etvos.jpg" alt="ETVOS モイストバリアクリーム">
         <h3>ETVOS モイストバリアクリーム</h3>
         <p>過酷な乾燥・アレルギーシーズンでも肌を守り、花粉やPM2.5など外的刺激から肌をバリア。ヒト型セラミド配合で、敏感な春の肌をうるおいで包み込みます。</p>
-        <ul>
-          <li>うるおいベールで花粉・PM2.5対策</li>
-          <li>4種のヒト型セラミド配合</li>
-          <li>低刺激・無添加処方</li>
-        </ul>
         <a href="https://amzn.to/4nMuJPb" class="btn" target="_blank">今すぐチェック</a>
       </div>
       <div class="review-card">
         <img src="images/etvosuser.jpg" alt="30代会社員">
-        <p>「毎年春になると頬が赤くなったり、かゆみが出たりしていましたが、ETVOSを使い始めてから肌の調子が安定しました。夜までしっとり感が続き、メイクのノリも格段にアップ。花粉シーズンでも肌がピリつかず、本当に助かっています。」</p>
+        <p>「春の花粉の季節はいつも肌荒れに悩まされていましたが、ETVOSを使ってから赤みが落ち着き、しっとり感が一日中続くようになりました。軽いテクスチャーで朝のメイク前にも使いやすく、外出中も肌が安定しています。」</p>
         <p class="name">30代会社員</p>
+        <div class="tips">
+          <h4>🌿 おすすめポイント</h4>
+          <ul>
+            <li>花粉・PM2.5対策に強い</li>
+            <li>軽い使い心地で朝にも最適</li>
+            <li>保湿持続力が高く、乾燥知らず</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -212,17 +233,20 @@ footer {
         <img src="images/sunao.jpg" alt="sunao UVクリーム">
         <h3>sunao UVクリーム</h3>
         <p>オーガニック由来の無添加日焼け止め。紫外線吸収剤不使用で敏感肌や赤ちゃんにも安心。さらりとした使用感で化粧下地としても活躍します。</p>
-        <ul>
-          <li>紫外線吸収剤不使用で低刺激</li>
-          <li>石けんで簡単オフ</li>
-          <li>SPF32 PA++ 保湿ケアも同時に</li>
-        </ul>
         <a href="https://amzn.to/3JmEMME" class="btn" target="_blank">今すぐチェック</a>
       </div>
       <div class="review-card">
         <img src="images/gym40.jpg" alt="栄養士">
-        <p>「汗をかいてもヨレず、白浮きもゼロ。軽いつけ心地で仕事中も快適に過ごせます。日焼け止め特有の乾燥感がなく、肌が一日中しっとり保たれる感じ。石けんで落とせるのも安心で、毎日のスキンケアの流れに自然になじみました。」</p>
+        <p>「汗をかいてもベタつかず、白浮きしないから仕事中も快適。自然なトーンアップでメイクなしでも肌がきれいに見えます。石けんで落とせるので帰宅後のケアも楽になりました。」</p>
         <p class="name">栄養士</p>
+        <div class="tips">
+          <h4>🌿 おすすめポイント</h4>
+          <ul>
+            <li>白浮きしないナチュラル仕上げ</li>
+            <li>軽い付け心地でメイク下地にも◎</li>
+            <li>石けんで落とせる簡単ケア</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -236,17 +260,20 @@ footer {
         <img src="images/naturesfor.jpg" alt="Naturesfor アドバンスクリアセラム">
         <h3>Naturesfor アドバンスクリアセラム</h3>
         <p>自然素材が角質層まで潤いを届け、透明感のあるクリア肌へ。植物エキスが乾燥小じわをふっくら整え、秋のゆらぎ肌にハリを与えます。</p>
-        <ul>
-          <li>ヘチマ水・ロサアルバ花水など自然成分配合</li>
-          <li>乾燥小じわケア</li>
-          <li>とろみのある滑らかな使用感</li>
-        </ul>
         <a href="https://amzn.to/3LbyAYi" class="btn" target="_blank">今すぐチェック</a>
       </div>
       <div class="review-card">
         <img src="images/biyoushi.jpg" alt="美容師">
-        <p>「乾燥とくすみが気になる秋、使い続けるうちに肌がもっちりしてツヤが戻りました。仕事柄、乾燥しがちな職場でも夜までうるおいが続きます。植物の優しい香りにも癒やされて、毎日のケアが楽しみになりました。」</p>
+        <p>「季節の変わり目はいつも乾燥や小じわが気になっていましたが、使い続けるうちに肌にハリとツヤが出て、化粧のりまで変わりました。自然な香りも気分を落ち着かせてくれます。」</p>
         <p class="name">美容師</p>
+        <div class="tips">
+          <h4>🌿 おすすめポイント</h4>
+          <ul>
+            <li>保湿＋ハリ感の両立</li>
+            <li>やさしい自然の香りでリラックス</li>
+            <li>秋のゆらぎ肌にも使える低刺激</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -260,17 +287,20 @@ footer {
         <img src="images/alos.jpg" alt="ALOS ORGANIC ローション">
         <h3>ALOS ORGANIC ローション</h3>
         <p>高保湿・高浸透のオーガニック化粧水。オレンジの香りでリラックスしながら乾燥肌をやさしくケア。べたつかずしっとり感が続きます。</p>
-        <ul>
-          <li>ビタミンC・レチノール配合</li>
-          <li>ヒアルロン酸で高保湿</li>
-          <li>オレンジの香りで癒やしの時間を</li>
-        </ul>
         <a href="https://amzn.to/4oCaXGI" class="btn" target="_blank">今すぐチェック</a>
       </div>
       <div class="review-card">
         <img src="images/50suser.jpg" alt="主婦">
-        <p>「冬は暖房と乾燥で肌が荒れがちでしたが、このローションを使ってから粉ふきがなくなりました。しっとりするのにベタつかず、朝まで保湿力が続きます。柑橘の香りがやさしく、スキンケアの時間がリラックスタイムになりました。」</p>
+        <p>「冬の乾燥で悩んでいましたが、ALOSを使い始めてから朝までしっとり。手に吸い付くような質感で、香りも優しくて癒されます。寒い季節の夜が楽しみになりました。」</p>
         <p class="name">主婦</p>
+        <div class="tips">
+          <h4>🌿 おすすめポイント</h4>
+          <ul>
+            <li>乾燥に強い高保湿処方</li>
+            <li>リラックスできる柑橘の香り</li>
+            <li>とろみがあるのにベタつかない</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>

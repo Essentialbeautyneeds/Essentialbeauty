@@ -16,15 +16,6 @@ Affiliate Landing Page Template
   <meta name="description" content="自然由来のオーガニック美容アイテムを厳選紹介。肌が喜ぶ自然の恵みで、美しく健康的な素肌を育てましょう。" />
   <meta name="keywords" content="オーガニック, ナチュラル, 美肌, アンチエイジング, 若返り, 自然派, コスメ, 化粧品, スキンケア, 保湿">
 
-  <!-- ✅ Google tag (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HGEPHVZYY"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-2HGEPHVZYY');
-  </script>
-
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -38,13 +29,8 @@ Affiliate Landing Page Template
       --section-bg:#fff9f9;
       --review-bg:#fff0f0;
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family:'Quicksand',sans-serif;
-      background:var(--bg);
-      color:#333;
-    }
-
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Quicksand',sans-serif;background:var(--bg);color:#333;}
     header{
       position:relative;
       background:linear-gradient(90deg,#f7e7e8,#f9d9d7);
@@ -65,45 +51,15 @@ Affiliate Landing Page Template
       backdrop-filter:blur(2px);
     }
     header .container{position:relative;z-index:2;}
-    h1{
-      font-family:'Playfair Display',serif;
-      font-size:38px;
-      letter-spacing:1px;
-      margin-bottom:8px;
-    }
+    h1{font-family:'Playfair Display',serif;font-size:38px;letter-spacing:1px;margin-bottom:8px;}
     p.lead{font-size:17px;color:#5a4545;}
 
-    /* ✅ ナビゲーション追加 */
-    nav {
-      position: relative;
-      z-index: 3;
-      margin-top: 25px;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 18px;
-      padding: 0;
-    }
-    nav a {
-      text-decoration: none;
-      font-weight: 600;
-      color: #503535;
-      background: rgba(255,255,255,0.7);
-      border-radius: 8px;
-      padding: 8px 14px;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      background: var(--accent);
-      color: #fff;
-    }
+    nav{position:relative; z-index:3; margin-top:25px;}
+    nav ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:18px;padding:0;}
+    nav a{text-decoration:none;font-weight:600;color:#503535;background:rgba(255,255,255,0.7);border-radius:8px;padding:8px 14px;transition:.3s;}
+    nav a:hover{background:var(--accent);color:#fff;}
 
     .container{max-width:980px;margin:30px auto;padding:0 16px;}
-
-    /* ✅ 以下は既存デザイン（変更なし） */
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;margin-top:40px;}
     .card{background:var(--card);border-radius:18px;padding:18px;box-shadow:0 5px 20px rgba(0,0,0,0.08);transition:.3s;}
     .card:hover{transform:translateY(-5px);box-shadow:0 8px 28px rgba(0,0,0,0.12);}
@@ -136,6 +92,20 @@ Affiliate Landing Page Template
     .disclosure-fixed{position:fixed;right:10px;bottom:10px;background:rgba(255,255,255,0.8);border-left:3px solid #ffb4b4;border-radius:8px;font-size:10px;color:#444;padding:6px 10px;max-width:180px;box-shadow:0 3px 10px rgba(0,0,0,0.1);z-index:99;}
     footer{text-align:center;font-size:13px;color:#888;margin:60px 0 30px;}
 
+    .back-btn{text-align:center;margin:40px 0;}
+    .back-btn a{
+      display:inline-block;
+      background:linear-gradient(45deg,#f48b8b,#f7a8a8);
+      color:#fff;
+      padding:12px 28px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:600;
+      box-shadow:0 4px 12px rgba(0,0,0,0.15);
+      transition:all .3s ease;
+    }
+    .back-btn a:hover{transform:translateY(-3px);}
+    
     @media(max-width:600px){
       h1{font-size:30px;}
       nav ul{gap:10px;}
@@ -152,7 +122,6 @@ Affiliate Landing Page Template
       <h1>肌が喜ぶ、自然のちから</h1>
       <p class="lead">心と肌にやさしい、自然派の贅沢ケアで美肌・アンチエイジング。</p>
 
-      <!-- ✅ 追加：ナビゲーション -->
       <nav>
         <ul>
           <li><a href="index.html">🏠 トップ</a></li>
@@ -165,34 +134,49 @@ Affiliate Landing Page Template
   </header>
 
   <main class="container">
+    <!-- 🌸 商品グリッド -->
     <div class="grid" id="productGrid"></div>
 
+    <!-- 💬 レビュー -->
     <section class="reviews">
       <div class="review-card">
         <img src="images/30sai.jpg" alt="30代女性会社員" class="review-photo">
         <div class="review-content">
           <strong>30代女性 会社員：</strong>
-          <p>N Organic Basicを使い始めてから、肌のキメが整ってメイクのりが驚くほど良くなりました。</p>
+          <p>N Organic Basicを使い始めてから、肌のキメが整い、メイクのりが驚くほど良くなりました。自然由来の成分で毎日安心して使えるのが嬉しいです。母にもプレゼントしました。</p>
         </div>
       </div>
       <div class="review-card">
         <img src="images/25sai.jpg" alt="25歳女性 ジムインストラクター" class="review-photo">
         <div class="review-content">
           <strong>25歳女性 ジムインストラクター：</strong>
-          <p>Allna Moisturizerで乾燥知らずに！自然の力ってすごいですね。</p>
+          <p>Allna Moisturizerを使ってから肌がもちもちになり、乾燥知らずに。朝の目覚めも快適で、友人にもおすすめしています。肌が自然に潤う感覚が嬉しいです。</p>
         </div>
       </div>
     </section>
 
+    <!-- 🌿 記事セクション -->
     <section class="article">
       <h2>オーガニックコスメを使うメリット</h2>
       <div class="article-block">
         <img src="images/article1.jpg" alt="オーガニック原料">
-        <p>自然由来のオーガニック原料を使用することで、肌への刺激を抑え、敏感肌にも安心して使えます。</p>
+        <p>自然由来のオーガニック原料を使用することで、肌への刺激を抑え、敏感肌にも安心して使えます。化学合成物質を避けることで、肌のバリア機能を守りながら潤いを保つことができます。</p>
       </div>
       <div class="article-block">
         <img src="images/article2.jpg" alt="肌への効果">
-        <p>保湿力や抗酸化作用に優れ、透明感とハリをサポート。継続的な使用で美肌を維持できます。</p>
+        <p>保湿力や抗酸化作用に優れ、肌のハリや透明感をサポートします。継続使用で、健やかで若々しい素肌を維持できます。肌のキメが整い、メイクのりも向上します。</p>
+      </div>
+      <div class="article-block">
+        <img src="images/article3.jpg" alt="体への効果">
+        <p>化学成分を抑えた低刺激設計で、アレルギーリスクを軽減。香料や保存料の負担も少なく、体にもやさしい美容習慣が可能です。肌に触れるものへの安心感が高まります。</p>
+      </div>
+      <div class="article-block">
+        <img src="images/article4.jpg" alt="自然派の美">
+        <p>自然派原料を活かした製品は、環境にも配慮。サステナブルなライフスタイルを実践しながら、美しく健康的な肌を育てられます。自然の恵みを感じる時間を持つことは心にも良い影響があります。</p>
+      </div>
+      <div class="article-block">
+        <img src="images/article5.jpg" alt="オーガニック美容習慣">
+        <p>オーガニックコスメを取り入れることで、日常の美容習慣が充実。肌だけでなく心も潤い、自然の恵みを感じながら自分を大切にする時間になります。心地よく使える製品選びが大切です。</p>
       </div>
     </section>
   </main>
@@ -221,6 +205,7 @@ Affiliate Landing Page Template
       {title:'Fafra Organic Hand Cream',desc:'植物由来成分91％配合のハンドケア。',img:'images/hand1.jpg',aff:'https://amzn.to/4hr6WCw'},
       {title:'N Organic Vie アイクリーム',desc:'目元に弾力を与える植物由来クリーム。',img:'images/eye1.jpg',aff:'https://amzn.to/4oJeiUA'}
     ];
+
     function renderGrid(items,id){
       const grid=document.getElementById(id);
       items.forEach(p=>{
@@ -235,8 +220,18 @@ Affiliate Landing Page Template
         grid.appendChild(card);
       });
     }
+
     renderGrid(PRODUCTS,'productGrid');
     renderGrid(CARES,'careGrid');
+
+    document.querySelectorAll('.review-card').forEach(card=>{
+      const obs=new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting){e.target.classList.add('visible'); obs.unobserve(e.target);}
+        });
+      },{threshold:0.1});
+      obs.observe(card);
+    });
   </script>
 </body>
 </html>

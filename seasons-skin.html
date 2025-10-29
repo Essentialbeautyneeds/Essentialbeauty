@@ -67,11 +67,13 @@ footer { text-align: center; font-size: 13px; color: #888; margin: 60px 0 30px; 
 <section class="article">
   <h2>🌸 春の肌ケア</h2>
   <img src="images/spring.jpg" alt="春のスキンケア" class="hero">
-  <div class="product-review">
-    <div class="product-card">
+
+  <div class="product-review" style="display:flex; gap:30px;">
+    <!-- 左：商品 -->
+    <div class="product-card" style="flex:1;">
       <img src="images/etvos.jpg" alt="ETVOS モイストバリアクリーム">
       <h3>ETVOS モイストバリアクリーム</h3>
-      <p>過酷な乾燥・アレルギーシーズンでも肌を守り、花粉やPM2.5など外的刺激から肌をバリア。ヒト型セラミド配合で、敏感な春の肌をうるおいで包み込みます。毎日の使用で肌の赤みが落ち着き、ふっくらとした透明感のある肌に導きます。</p>
+      <p>過酷な乾燥・アレルギーシーズンでも肌を守り、花粉やPM2.5など外的刺激から肌をバリア。ヒト型セラミド配合で敏感な春の肌をうるおいで包み込みます。毎日の使用で肌の赤みが落ち着き、ふっくら透明感のある肌へ。さらにメイクのノリも向上します。</p>
       <ul>
         <li>うるおいベールで花粉・PM2.5対策</li>
         <li>4種のヒト型セラミド配合</li>
@@ -79,102 +81,39 @@ footer { text-align: center; font-size: 13px; color: #888; margin: 60px 0 30px; 
       </ul>
       <a href="https://amzn.to/4nMuJPb" class="btn" target="_blank">今すぐチェック</a>
     </div>
-    <div class="review-card">
-      <img src="images/etvosuser.jpg" alt="30代会社員">
-      <p>「春の花粉の季節はいつも肌荒れに悩まされていましたが、ETVOSを使ってから肌の赤みが落ち着き、1日中しっとり。メイクのノリも良くなりました！」</p>
-      <p class="name">30代会社員</p>
-    </div>
-    <div class="review-card">
-      <img src="images/20.1.jpg" alt="20代女性">
-      <p>「春の敏感肌でも安心して使える。保湿力が高く、肌がふっくらする感じがします。毎日のケアが楽しみになりました。」</p>
-      <p class="name">20代女性</p>
+
+    <!-- 右：レビュー2人縦 -->
+    <div style="flex:1; display:flex; flex-direction:column; gap:20px;">
+      <div class="review-card">
+        <img src="images/etvosuser.jpg" alt="30代会社員">
+        <p>「春の花粉の季節は肌荒れに悩まされていましたが、ETVOSを使ってから肌の赤みが落ち着き、1日中しっとり。メイクのノリも良くなり、肌のキメも整いました。」</p>
+        <p class="name">30代会社員</p>
+      </div>
+      <div class="review-card">
+        <img src="images/20.1.jpg" alt="20代女性">
+        <p>「春の敏感肌でも安心して使える。保湿力が高く、肌がふっくらして透明感が出てきました。毎日のスキンケアが楽しみになります。」</p>
+        <p class="name">20代女性</p>
+      </div>
     </div>
   </div>
-</section>
 
-<!-- 夏 -->
-<section class="article">
-  <h2>☀️ 夏の肌ケア</h2>
-  <img src="images/summer.jpg" alt="夏のスキンケア" class="hero">
-  <div class="product-review">
-    <div class="product-card">
-      <img src="images/sunao.jpg" alt="sunao UVクリーム">
-      <h3>sunao UVクリーム</h3>
-      <p>オーガニック由来の無添加日焼け止め。紫外線吸収剤不使用で敏感肌や赤ちゃんにも安心。軽いテクスチャーでべたつかず、化粧下地としても使えます。汗や水にも強く、夏のレジャーでも安心です。</p>
-      <ul>
-        <li>紫外線吸収剤不使用で低刺激</li>
-        <li>石けんで簡単オフ</li>
-        <li>SPF32 PA++ 保湿ケアも同時に</li>
-      </ul>
-      <a href="https://amzn.to/3JmEMME" class="btn" target="_blank">今すぐチェック</a>
+  <!-- おすすめポイント -->
+  <div class="grid" style="margin-top:40px;">
+    <div class="card">
+      <img src="images/skin1.jpg" alt="おすすめアイテム1">
+      <div class="info">
+        <h4>おすすめポイント1</h4>
+        <p>自然由来成分で肌に優しく、敏感肌でも安心して使える保湿アイテム。</p>
+        <a href="#" class="btn">詳細を見る</a>
+      </div>
     </div>
-    <div class="review-card">
-      <img src="images/gym40.jpg" alt="栄養士">
-      <p>「白浮きせず、軽い着け心地で汗にも強く、日常生活でも快適。石けんで落とせるので肌への負担も少なく、敏感肌の私でも安心して使えます。」</p>
-      <p class="name">栄養士</p>
-    </div>
-    <div class="review-card">
-      <img src="images/20.2.jpg" alt="20代女性">
-      <p>「夏でも肌がべたつかず、紫外線からしっかり守ってくれる安心感。保湿成分入りで乾燥も防げます。」</p>
-      <p class="name">20代女性</p>
-    </div>
-  </div>
-</section>
-
-<!-- 秋 -->
-<section class="article">
-  <h2>🍂 秋の肌ケア</h2>
-  <img src="images/autumn.jpg" alt="秋のスキンケア" class="hero">
-  <div class="product-review">
-    <div class="product-card">
-      <img src="images/naturesfor.jpg" alt="Naturesfor アドバンスクリアセラム">
-      <h3>Naturesfor アドバンスクリアセラム</h3>
-      <p>自然素材が角質層まで潤いを届け、透明感のあるクリア肌へ。植物エキス配合で乾燥小じわもふっくら整い、秋のゆらぎ肌にハリを与えます。毎日の使用で肌のキメが整い、化粧ノリもアップ。</p>
-      <ul>
-        <li>ヘチマ水・ロサアルバ花水など自然成分配合</li>
-        <li>乾燥小じわケア</li>
-        <li>滑らかなテクスチャーで心地よい使用感</li>
-      </ul>
-      <a href="https://amzn.to/3LbyAYi" class="btn" target="_blank">今すぐチェック</a>
-    </div>
-    <div class="review-card">
-      <img src="images/biyoushi.jpg" alt="美容師">
-      <p>「乾燥が気にならなくなり、肌のトーンが明るくなった気がします。秋でもしっとり感が持続し、化粧ノリも良いです。」</p>
-      <p class="name">美容師</p>
-    </div>
-    <div class="review-card">
-      <img src="images/30.1.jpg" alt="30代女性">
-      <p>「秋のゆらぎ肌でも安心して使えます。保湿力が高く、肌がふっくらして透明感が出てきました。」</p>
-      <p class="name">30代女性</p>
-    </div>
-  </div>
-</section>
-
-<!-- 冬 -->
-<section class="article">
-  <h2>❄️ 冬の肌ケア</h2>
-  <img src="images/winter.jpg" alt="冬のスキンケア" class="hero">
-  <div class="product-review">
-    <div class="product-card">
-      <img src="images/alos.jpg" alt="ALOS ORGANIC ローション">
-      <h3>ALOS ORGANIC ローション</h3>
-      <p>高保湿・高浸透のオーガニック化粧水。乾燥肌をやさしくケアし、しっとり感を長時間持続。オレンジの香りでリラックスしながら毎日のスキンケアが楽しめます。</p>
-      <ul>
-        <li>ビタミンC・レチノール配合</li>
-        <li>ヒアルロン酸で高保湿</li>
-        <li>オレンジの香りで癒やしの時間</li>
-      </ul>
-      <a href="https://amzn.to/4oCaXGI" class="btn" target="_blank">今すぐチェック</a>
-    </div>
-    <div class="review-card">
-      <img src="images/50suser.jpg" alt="主婦">
-      <p>「冬でも肌がつっぱらず、しっとり。香りも穏やかでリラックスできます。乾燥知らずで化粧ノリも良く、毎日のケアが楽しみです。」</p>
-      <p class="name">主婦</p>
-    </div>
-    <div class="review-card">
-      <img src="images/40.1.jpg" alt="40代女性">
-      <p>「寒さで乾燥する時期でも肌がしっとり落ち着き、透明感もアップ。家事や仕事で忙しい日も安心して使えます。」</p>
-      <p class="name">40代女性</p>
+    <div class="card">
+      <img src="images/moist1.jpg" alt="おすすめアイテム2">
+      <div class="info">
+        <h4>おすすめポイント2</h4>
+        <p>角質層まで潤いを届け、ふっくらとした透明感のある肌に導きます。</p>
+        <a href="#" class="btn">詳細を見る</a>
+      </div>
     </div>
   </div>
 </section>

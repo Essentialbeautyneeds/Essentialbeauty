@@ -2,88 +2,104 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>乾燥肌におすすめのオーガニック成分｜肌が喜ぶ自然派コスメ</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#fff8f8;
-      --card:#ffffff;
-      --accent:#f7a8a8;
-      --accent-hover:#f48b8b;
-      --muted:#666;
-      --section-bg:#fff9f9;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Quicksand',sans-serif;background:var(--bg);color:#333;}
-    header{position:relative;text-align:center;color:#503535;padding:80px 20px;background:linear-gradient(90deg,#f7e7e8,#f9d9d7);}
-    h1{font-family:'Playfair Display',serif;font-size:38px;margin-bottom:8px;}
-    p.lead{font-size:17px;color:#5a4545;}
-    .container{max-width:980px;margin:30px auto;padding:0 16px;}
-    .article{margin-top:60px;}
-    .article h2{font-family:'Playfair Display',serif;font-size:28px;margin-bottom:20px;color:#503535;text-align:center;}
-    .article p{font-size:15px;line-height:1.6;color:#444;margin-bottom:20px;}
-    .article-block{margin-bottom:60px;text-align:center;}
-    .article-block img{width:90%;max-width:600px;height:auto;border-radius:14px;margin-bottom:20px;object-fit:cover;}
-    @media(max-width:600px){.article-block img{width:100%;}}
-    footer{text-align:center;font-size:13px;color:#888;margin:60px 0 30px;}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>オーガニック美容コラム｜肌が喜ぶ自然派コスメ</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff8f8;
+  --card:#ffffff;
+  --accent:#f7a8a8;
+  --accent-hover:#f48b8b;
+  --muted:#666;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Quicksand',sans-serif;background:var(--bg);color:#333;}
+header{text-align:center;padding:80px 20px;background:linear-gradient(90deg,#f7e7e8,#f9d9d7);}
+h1{font-family:'Playfair Display',serif;font-size:38px;margin-bottom:8px;}
+p.lead{font-size:17px;color:#5a4545;}
+.container{max-width:980px;margin:30px auto;padding:0 16px;}
+.article{margin-top:60px;}
+.article h2{font-family:'Playfair Display',serif;font-size:28px;margin-bottom:20px;color:#503535;text-align:center;}
+.article-block{margin-bottom:60px;text-align:center;}
+.article-block img{width:90%;max-width:600px;height:auto;border-radius:14px;margin-bottom:20px;object-fit:cover;}
+.article-block p{font-size:15px;line-height:1.6;color:#444;margin-bottom:20px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;margin-top:20px;}
+.card{background:var(--card);border-radius:18px;padding:18px;box-shadow:0 5px 20px rgba(0,0,0,0.08);transition:.3s;}
+.card:hover{transform:translateY(-5px);box-shadow:0 8px 28px rgba(0,0,0,0.12);}
+.thumb{width:100%;height:260px;border-radius:14px;overflow:hidden;background:#ffeef0;}
+.thumb img{width:100%;height:100%;object-fit:cover;}
+.title{font-weight:600;margin:10px 0 6px;font-size:16px;color:#333;}
+.desc{font-size:14px;color:var(--muted);margin:0 0 12px;}
+.btn{
+  display:inline-block;
+  text-align:center;
+  padding:14px 22px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:15px;
+  background:linear-gradient(45deg,#f48b8b,#f7a8a8);
+  color:#fff;
+  transition:all .3s ease;
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+.btn:hover{
+  background:linear-gradient(45deg,#f26a6a,#f7a8a8);
+  transform:translateY(-3px);
+  box-shadow:0 6px 20px rgba(0,0,0,0.25);
+}
+footer{text-align:center;font-size:13px;color:#888;margin:60px 0 30px;}
+@media(max-width:600px){
+  .article-block img{width:100%;}
+}
+</style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>乾燥肌におすすめのオーガニック成分とは？</h1>
-      <p class="lead">肌にやさしい自然派コスメで、健やかな美肌を手に入れましょう。</p>
+
+<header>
+  <div class="container">
+    <h1>オーガニック美容コラム</h1>
+    <p class="lead">肌にやさしい自然派コスメの情報をお届けします</p>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- コラム記事サンプル -->
+  <section class="article">
+    <h2>乾燥肌におすすめのオーガニック成分</h2>
+    <div class="article-block">
+      <img src="images/dry-skin.jpg" alt="乾燥肌におすすめのオーガニック成分" loading="lazy">
+      <p>乾燥肌に悩む方に向けて、オーガニック成分の保湿力や肌への優しさを詳しく解説。クリームや植物エキスを使ったケアで、ふっくらうるおい肌に導きます。</p>
     </div>
-  </header>
+  </section>
 
-<div style="text-align:center;margin:40px 0;">
-  <a href="index.html" style="display:inline-block;background:linear-gradient(45deg,#f48b8b,#f7a8a8);
-     color:#fff;padding:12px 20px;border-radius:12px;text-decoration:none;font-weight:600;
-     box-shadow:0 4px 12px rgba(0,0,0,0.15);transition:all .3s ease;">
-    トップページに戻る
-  </a>
-  <a href="another-page.html" style="display:inline-block;background:linear-gradient(45deg,#f48b8b,#f7a8a8);
-     color:#fff;padding:12px 20px;border-radius:12px;text-decoration:none;font-weight:600;
-     box-shadow:0 4px 12px rgba(0,0,0,0.15);transition:all .3s ease;margin-left:10px;">
-    詳細記事を見る
-  </a>
-</div>
+  <section class="article">
+    <h2>30代女性の肌悩みと自然派コスメ</h2>
+    <div class="article-block">
+      <img src="images/30s-skin.jpg" alt="30代女性の肌悩みと自然派コスメ" loading="lazy">
+      <p>30代女性の肌は乾燥や小ジワ、くすみなどの悩みが増える時期。自然派コスメで丁寧にケアすることで、肌本来の健康的な美しさを取り戻すことができます。</p>
+    </div>
+  </section>
 
-  
-  <main class="container">
-    <!-- 1. 乾燥肌におすすめのオーガニック成分 -->
-    <section class="article">
-      <h2>乾燥肌におすすめのオーガニック成分</h2>
-      <div class="article-block">
-        <img src="images/dry-skin.jpg" alt="乾燥肌におすすめのオーガニック成分" loading="lazy">
-        <p>植物エキスやオーガニッククリームを使用することで、乾燥肌を優しくケア。手や顔に塗るイメージの写真のように、日々のスキンケアで潤いとハリを与えます。</p>
-        <p>特にホホバオイルやシアバター、アロエベラなどの天然成分は肌の水分保持を助け、外部刺激から守るバリア機能を高めます。化学成分に頼らず、自然由来の保湿力を活かすことで、乾燥によるかゆみや赤みを抑え、しっとり滑らかな肌に整えることが可能です。毎日のスキンケアに取り入れることで、季節の変わり目やエアコンによる乾燥からもしっかり肌を守ります。</p>
-      </div>
-    </section>
+  <section class="article">
+    <h2>オーガニック vs ケミカル、どっちが本当に肌にいいの？</h2>
+    <div class="article-block">
+      <img src="images/organic-vs-chemical.jpg" alt="オーガニックとケミカルの比較" loading="lazy">
+      <p>肌に優しいのはオーガニック？それともケミカル？成分や刺激性、保湿力の違いを比較し、肌への影響をわかりやすく解説。自分の肌に合った選択ができる情報を提供します。</p>
+    </div>
+  </section>
 
-    <!-- 2. 30代女性の肌悩みと自然派コスメ -->
-    <section class="article">
-      <h2>30代女性の肌悩みと自然派コスメの関係</h2>
-      <div class="article-block">
-        <img src="images/30s-skin.jpg" alt="30代女性の肌悩みと自然派コスメ" loading="lazy">
-        <p>30代になると、肌の乾燥や小じわ、ハリの低下が気になり始めます。こうした変化は、加齢だけでなく生活習慣や環境ストレスによっても進行します。</p>
-        <p>自然派コスメは肌にやさしく、低刺激で敏感肌にも使いやすいため、毎日のスキンケアに安心して取り入れられます。ビタミンや抗酸化成分を豊富に含むオーガニック原料は、肌のハリや透明感を保ち、潤いを与えるだけでなく、健康的な素肌作りをサポートします。忙しい女性でも無理なく続けられるスキンケア習慣を作ることができ、見た目にも心にもゆとりが生まれます。</p>
-      </div>
-    </section>
+  <!-- 季節別スキンケアページへのリンク -->
+  <div style="text-align:center;margin:50px 0;">
+    <a href="seasons-skin.html" class="btn">季節別オーガニックスキンケア特集を見る</a>
+  </div>
 
-    <!-- 3. オーガニック vs ケミカル -->
-    <section class="article">
-      <h2>オーガニック vs ケミカル、どっちが本当に肌にいいの？</h2>
-      <div class="article-block">
-        <img src="images/organic-vs-chemical.jpg" alt="オーガニック vs ケミカル" loading="lazy">
-        <p>スキンケア製品にはオーガニック素材と化学成分を使った製品があります。どちらが良いかは肌質や目的によって変わりますが、オーガニック素材は低刺激で肌への負担が少なく、敏感肌の方でも安心して使用できます。</p>
-        <p>一方で、化学成分は即効性や保存性に優れ、特定の肌悩みに対して効果的な場合もあります。大切なのは、成分を理解し、自分の肌に合ったものを選ぶこと。オーガニックコスメは自然の恵みを活かした穏やかなケアで、長期的に肌の健康を支えることができ、化学成分に頼りすぎず肌本来の力を高めるサポートになります。</p>
-      </div>
-    </section>
-  </main>
+</main>
 
-  <footer>© 2025 EssentialBeautyNeeds</footer>
+<footer>© 2025 EssentialBeautyNeeds</footer>
+
 </body>
 </html>

@@ -9,7 +9,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#fff8f8; --card:#ffffff; --accent:#f7a8a8; --accent-hover:#f48b8b; --muted:#666;
+  --bg:#fff8f8; 
+  --card:#ffffff; 
+  --accent:#f7a8a8; 
+  --accent-hover:#f48b8b; 
+  --muted:#666;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Quicksand',sans-serif;background:var(--bg);color:#333;}
@@ -20,7 +24,7 @@ p.lead{font-size:17px;color:#5a4545;}
 .article{margin-top:60px;}
 .article h2{font-family:'Playfair Display',serif;font-size:28px;margin-bottom:20px;color:#503535;text-align:center;}
 .article-block{margin-bottom:60px;text-align:center;}
-.article-block img{width:90%;max-width:800px;height:auto;border-radius:14px;margin-bottom:20px;object-fit:cover;}
+.article-block img{width:90%;max-width:600px;height:auto;border-radius:14px;margin-bottom:20px;object-fit:cover;}
 .article-block p{font-size:15px;line-height:1.6;color:#444;margin-bottom:20px;}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;margin-top:20px;}
 .card{background:var(--card);border-radius:18px;padding:18px;box-shadow:0 5px 20px rgba(0,0,0,0.08);transition:.3s;}
@@ -32,6 +36,20 @@ p.lead{font-size:17px;color:#5a4545;}
 .btn{display:block;text-align:center;width:100%;padding:12px 14px;border-radius:10px;text-decoration:none;font-weight:600;font-size:14px;background:var(--accent);color:#fff;transition:.3s;}
 .btn:hover{background:var(--accent-hover);}
 footer{text-align:center;font-size:13px;color:#888;margin:60px 0 30px;}
+.disclosure-fixed{
+  position:fixed;
+  right:10px;
+  bottom:10px;
+  background:rgba(255,255,255,0.8);
+  border-left:3px solid #ffb4b4;
+  border-radius:8px;
+  font-size:10px;
+  color:#444;
+  padding:6px 10px;
+  max-width:180px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  z-index:99;
+}
 @media(max-width:600px){.article-block img{width:100%;}}
 </style>
 </head>
@@ -49,7 +67,7 @@ footer{text-align:center;font-size:13px;color:#888;margin:60px 0 30px;}
     <h2>春の肌ケア</h2>
     <div class="article-block">
       <img src="images/spring.jpg" alt="春の肌ケア" loading="lazy">
-      <p>春は花粉や季節の変わり目による乾燥・肌荒れが起きやすい季節です。オーガニック保湿クリームや植物由来美容液を取り入れることで、肌の赤みやかゆみを抑えながら健やかな肌を保てます。敏感肌向けの自然派コスメは、化学成分を抑えて刺激を最小限にするため、春の肌環境にぴったりです。毎日のスキンケアで春の変化に負けない素肌を作りましょう。</p>
+      <p>春は花粉や乾燥が肌に影響しやすい季節です。ETVOS モイストバリアクリームで肌をバリアし、花粉やPM2.5から守りながら保湿。植物オイルとヒト型セラミドで肌本来の健やかさを保ち、しっとり潤う肌へ導きます。</p>
     </div>
     <div class="grid" id="springGrid"></div>
   </section>
@@ -59,7 +77,7 @@ footer{text-align:center;font-size:13px;color:#888;margin:60px 0 30px;}
     <h2>夏の肌ケア</h2>
     <div class="article-block">
       <img src="images/summer.jpg" alt="夏の肌ケア" loading="lazy">
-      <p>夏は紫外線や汗、皮脂の増加によって肌ダメージが起こりやすい季節です。オーガニック成分のUVカットジェルや軽めの保湿アイテムで肌を守り、さっぱりとケアしましょう。抗酸化作用のある自然由来成分を取り入れることで、肌の老化を防ぎ、透明感のある肌を維持できます。夏の外出時にも安心して使えるナチュラルなスキンケアがポイントです。</p>
+      <p>夏は紫外線や汗による肌ダメージが増える時期。sunao UVクリームで紫外線吸収剤不使用のオーガニックUV対策。敏感肌や赤ちゃんにも安心で、化粧下地としても使え、保湿しながら日焼けから肌を守ります。</p>
     </div>
     <div class="grid" id="summerGrid"></div>
   </section>
@@ -69,7 +87,7 @@ footer{text-align:center;font-size:13px;color:#888;margin:60px 0 30px;}
     <h2>秋の肌ケア</h2>
     <div class="article-block">
       <img src="images/autumn.jpg" alt="秋の肌ケア" loading="lazy">
-      <p>秋は乾燥と気温差による肌トラブルが増える季節です。オーガニックオイルや保湿クリームでしっかり保湿し、肌の水分バランスを整えましょう。自然由来のビタミンや植物エキスを取り入れることで、肌にうるおいを与え、ハリのある健康的な素肌を維持できます。秋は夜のスキンケアで栄養補給を意識することが美肌への鍵です。</p>
+      <p>秋は乾燥と気温差による肌トラブルが増える季節。Naturesfor アドバンスクリアセラムで透明感のある潤い肌へ。濃厚な植物エキスで角質層まで潤いを届け、乾燥小じわもふっくら整え、さらりとした使い心地でハリのある肌を保ちます。</p>
     </div>
     <div class="grid" id="autumnGrid"></div>
   </section>
@@ -79,7 +97,7 @@ footer{text-align:center;font-size:13px;color:#888;margin:60px 0 30px;}
     <h2>冬の肌ケア</h2>
     <div class="article-block">
       <img src="images/winter.jpg" alt="冬の肌ケア" loading="lazy">
-      <p>冬は乾燥が最も厳しく、空気の冷たさや暖房で肌の水分が失われやすい季節です。高保湿のオーガニッククリームやバームを使用して、肌のバリア機能を守りましょう。毎日の丁寧なスキンケアで外気や暖房による乾燥を防ぎ、しっとりと柔らかい肌をキープすることができます。自然派コスメで冬でも健やかで潤いある肌を目指しましょう。</p>
+      <p>冬は乾燥が最も厳しい季節。ALOS ORGANIC ローションで敏感肌も安心の高保湿ケア。ヒアルロン酸やビタミンC配合で肌に潤いとハリを与え、スキンケア時間をリラックスできるオレンジの香りとともに、乾燥知らずのしっとり肌を実現します。</p>
     </div>
     <div class="grid" id="winterGrid"></div>
   </section>
@@ -92,13 +110,18 @@ footer{text-align:center;font-size:13px;color:#888;margin:60px 0 30px;}
   </div>
 </main>
 
+<!-- アフィリエイト開示固定表示 -->
+<div class="disclosure-fixed">
+  <strong>開示：</strong> 当サイトのリンクの一部はアフィリエイトリンクです。購入により紹介手数料が支払われる場合があります。
+</div>
+
 <footer>© 2025 EssentialBeautyNeeds</footer>
 
 <script>
-const SPRING=[{title:'春の保湿クリーム',desc:'軽やかで潤うオーガニッククリーム',img:'images/product1.jpg',aff:'#'}];
-const SUMMER=[{title:'夏のUVジェル',desc:'オーガニック成分で紫外線対策',img:'images/product2.jpg',aff:'#'}];
-const AUTUMN=[{title:'秋の美容オイル',desc:'植物由来で乾燥対策',img:'images/product3.jpg',aff:'#'}];
-const WINTER=[{title:'冬の高保湿バーム',desc:'極上の保湿で乾燥から守る',img:'images/product4.jpg',aff:'#'}];
+const SPRING=[{title:'ETVOS モイストバリアクリーム',desc:'過酷な乾燥・アレルギーシーズンで肌を守る保湿クリーム',img:'images/etvos.jpg',aff:'https://amzn.to/4nMuJPb'}];
+const SUMMER=[{title:'sunao UVクリーム',desc:'オーガニック由来無添加の日焼け止め',img:'images/sunao.jpg',aff:'https://amzn.to/3JmEMME'}];
+const AUTUMN=[{title:'Naturesfor アドバンスクリアセラム',desc:'植物エキスで潤い・ハリを与える美容液',img:'images/naturesfor.jpg',aff:'https://amzn.to/3LbyAYi'}];
+const WINTER=[{title:'ALOS ORGANIC ローション',desc:'敏感肌も安心の高保湿化粧水',img:'images/alos.jpg',aff:'https://amzn.to/4oCaXGI'}];
 
 function renderGrid(items,id){
   const grid=document.getElementById(id);

@@ -1,5 +1,5 @@
 
-
+<!doctype html>
 <html lang="ja">
 <head>
 <meta charset="utf-8">
@@ -82,7 +82,7 @@ p.lead {
 }
 .product-card img {
   width: 100%;
-  height: 240px;
+  height: 480px; /* 高さを2倍に */
   border-radius: 14px;
   object-fit: cover;
   margin-bottom: 15px;
@@ -133,57 +133,14 @@ p.lead {
   font-size: 14px;
   color: #333;
   margin-bottom: 10px;
+  text-align: left;
 }
 .review-card .name {
   font-weight: 600;
   color: #555;
   margin-top: 5px;
+  text-align: right;
 }
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 25px;
-  margin-top: 40px;
-}
-.card {
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: 0.3s;
-}
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-}
-.card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-.card .info {
-  padding: 15px;
-}
-.card .info h4 {
-  font-size: 17px;
-  margin-bottom: 8px;
-}
-.card .info p {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 10px;
-}
-.card .btn {
-  display: inline-block;
-  background: var(--accent);
-  color: #fff;
-  padding: 8px 14px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-}
-.card .btn:hover { background: var(--accent-hover); }
 
 footer {
   text-align: center;
@@ -192,6 +149,7 @@ footer {
   margin: 60px 0 30px;
 }
 
+/* 固定のアフィリエイト免責 */
 #affiliateNotice {
   position: fixed;
   right: 12px;
@@ -206,7 +164,9 @@ footer {
 
 /* スマホ対応 */
 @media (max-width: 768px) {
-  .product-review { flex-direction: column; }
+  .product-review {
+    flex-direction: column;
+  }
 }
 </style>
 </head>
@@ -227,12 +187,17 @@ footer {
       <div class="product-card">
         <img src="images/etvos.jpg" alt="ETVOS モイストバリアクリーム">
         <h3>ETVOS モイストバリアクリーム</h3>
-        <p>過酷な乾燥・アレルギーシーズンでも肌を守り、花粉やPM2.5など外的刺激から肌をバリア。</p>
+        <p>過酷な乾燥・アレルギーシーズンでも肌を守り、花粉やPM2.5など外的刺激から肌をバリア。ヒト型セラミド配合で、敏感な春の肌をうるおいで包み込みます。</p>
+        <ul>
+          <li>うるおいベールで花粉・PM2.5対策</li>
+          <li>4種のヒト型セラミド配合</li>
+          <li>低刺激・無添加処方</li>
+        </ul>
         <a href="https://amzn.to/4nMuJPb" class="btn" target="_blank">今すぐチェック</a>
       </div>
       <div class="review-card">
         <img src="images/etvosuser.jpg" alt="30代会社員">
-        <p>「春の花粉の季節はいつも肌荒れに悩まされていましたが、ETVOSを使ってから肌の赤みが落ち着きました！」</p>
+        <p>「毎年春になると頬が赤くなったり、かゆみが出たりしていましたが、ETVOSを使い始めてから肌の調子が安定しました。夜までしっとり感が続き、メイクのノリも格段にアップ。花粉シーズンでも肌がピリつかず、本当に助かっています。」</p>
         <p class="name">30代会社員</p>
       </div>
     </div>
@@ -246,12 +211,17 @@ footer {
       <div class="product-card">
         <img src="images/sunao.jpg" alt="sunao UVクリーム">
         <h3>sunao UVクリーム</h3>
-        <p>オーガニック由来の無添加日焼け止め。紫外線吸収剤不使用で敏感肌にも安心。</p>
+        <p>オーガニック由来の無添加日焼け止め。紫外線吸収剤不使用で敏感肌や赤ちゃんにも安心。さらりとした使用感で化粧下地としても活躍します。</p>
+        <ul>
+          <li>紫外線吸収剤不使用で低刺激</li>
+          <li>石けんで簡単オフ</li>
+          <li>SPF32 PA++ 保湿ケアも同時に</li>
+        </ul>
         <a href="https://amzn.to/3JmEMME" class="btn" target="_blank">今すぐチェック</a>
       </div>
       <div class="review-card">
         <img src="images/gym40.jpg" alt="栄養士">
-        <p>「白浮きせず、軽い着け心地で汗にも強い！日常使いにぴったりです。」</p>
+        <p>「汗をかいてもヨレず、白浮きもゼロ。軽いつけ心地で仕事中も快適に過ごせます。日焼け止め特有の乾燥感がなく、肌が一日中しっとり保たれる感じ。石けんで落とせるのも安心で、毎日のスキンケアの流れに自然になじみました。」</p>
         <p class="name">栄養士</p>
       </div>
     </div>
@@ -265,12 +235,17 @@ footer {
       <div class="product-card">
         <img src="images/naturesfor.jpg" alt="Naturesfor アドバンスクリアセラム">
         <h3>Naturesfor アドバンスクリアセラム</h3>
-        <p>自然素材が角質層まで潤いを届け、透明感のあるクリア肌へ。</p>
+        <p>自然素材が角質層まで潤いを届け、透明感のあるクリア肌へ。植物エキスが乾燥小じわをふっくら整え、秋のゆらぎ肌にハリを与えます。</p>
+        <ul>
+          <li>ヘチマ水・ロサアルバ花水など自然成分配合</li>
+          <li>乾燥小じわケア</li>
+          <li>とろみのある滑らかな使用感</li>
+        </ul>
         <a href="https://amzn.to/3LbyAYi" class="btn" target="_blank">今すぐチェック</a>
       </div>
       <div class="review-card">
         <img src="images/biyoushi.jpg" alt="美容師">
-        <p>「乾燥が気にならなくなり、肌のトーンが明るくなった気がします。」</p>
+        <p>「乾燥とくすみが気になる秋、使い続けるうちに肌がもっちりしてツヤが戻りました。仕事柄、乾燥しがちな職場でも夜までうるおいが続きます。植物の優しい香りにも癒やされて、毎日のケアが楽しみになりました。」</p>
         <p class="name">美容師</p>
       </div>
     </div>
@@ -284,52 +259,18 @@ footer {
       <div class="product-card">
         <img src="images/alos.jpg" alt="ALOS ORGANIC ローション">
         <h3>ALOS ORGANIC ローション</h3>
-        <p>高保湿・高浸透のオーガニック化粧水。乾燥肌をやさしくケア。</p>
+        <p>高保湿・高浸透のオーガニック化粧水。オレンジの香りでリラックスしながら乾燥肌をやさしくケア。べたつかずしっとり感が続きます。</p>
+        <ul>
+          <li>ビタミンC・レチノール配合</li>
+          <li>ヒアルロン酸で高保湿</li>
+          <li>オレンジの香りで癒やしの時間を</li>
+        </ul>
         <a href="https://amzn.to/4oCaXGI" class="btn" target="_blank">今すぐチェック</a>
       </div>
       <div class="review-card">
         <img src="images/50suser.jpg" alt="主婦">
-        <p>「冬でも肌がつっぱらず、しっとり。香りも癒やされます。」</p>
+        <p>「冬は暖房と乾燥で肌が荒れがちでしたが、このローションを使ってから粉ふきがなくなりました。しっとりするのにベタつかず、朝まで保湿力が続きます。柑橘の香りがやさしく、スキンケアの時間がリラックスタイムになりました。」</p>
         <p class="name">主婦</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 🔸 おすすめアイテム -->
-  <section class="article">
-    <h2>🌿 季節を問わず人気のオーガニックアイテム</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="images/skin1.jpg" alt="N Organic Basic">
-        <div class="info">
-          <h4>N Organic Basic</h4>
-          <p>自然由来成分を贅沢に配合したスキンケアライン。</p>
-          <a href="https://amzn.to/479cQEZ" class="btn" target="_blank">詳細を見る</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="images/moist1.jpg" alt="Allna Moisturizer">
-        <div class="info">
-          <h4>Allna Moisturizer</h4>
-          <p>乾燥知らずのうるおい肌へ導く保湿クリーム。</p>
-          <a href="https://amzn.to/3LtRo51" class="btn" target="_blank">詳細を見る</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="images/face1.jpg" alt="Allna Organic Face Pack">
-        <div class="info">
-          <h4>Allna Organic Face Pack</h4>
-          <p>自然成分を詰めた集中ケアパック。</p>
-          <a href="https://amzn.to/47czgp2" class="btn" target="_blank">詳細を見る</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="images/lip1.jpg" alt="Eternum Lip Serum">
-        <div class="info">
-          <h4>Eternum Lip Serum</h4>
-          <p>唇に潤いと血色感を与えるリップケア。</p>
-          <a href="https://amzn.to/4qvw5jJ" class="btn" target="_blank">詳細を見る</a>
-        </div>
       </div>
     </div>
   </section>
@@ -337,10 +278,11 @@ footer {
   <div style="text-align:center;margin:60px 0;">
     <a href="index.html" class="btn">トップページに戻る</a>
   </div>
-
 </main>
 
-<footer>© 2025 EssentialBeautyNeeds</footer>
+<footer>
+  © 2025 EssentialBeautyNeeds
+</footer>
 
 <div id="affiliateNotice">※当サイトはアフィリエイト広告を利用しています</div>
 

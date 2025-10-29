@@ -9,56 +9,54 @@
 
 <style>
 :root {
-  --bg: #fff8f8;
-  --card: #ffffff;
-  --accent: #f7a8a8;
-  --accent-hover: #f48b8b;
-  --muted: #666;
+  --bg:#fff8f8;
+  --card:#fff;
+  --accent:#f7a8a8;
+  --accent-hover:#f48b8b;
+  --muted:#666;
+  --review-bg:#fff0f0;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Quicksand', sans-serif; background: var(--bg); color: #333; line-height: 1.6; }
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Quicksand',sans-serif;background:var(--bg);color:#333;line-height:1.6;}
+header{text-align:center;padding:80px 20px;background:linear-gradient(135deg,#ffe6e6,#ffdcdc);color:#503535;box-shadow:0 4px 20px rgba(0,0,0,0.1);}
+h1{font-family:'Playfair Display',serif;font-size:42px;margin-bottom:10px;}
+p.lead{font-size:18px;color:#5a4545;}
+.container{max-width:1000px;margin:0 auto;padding:0 20px;}
 
-header { text-align: center; padding: 80px 20px; background: linear-gradient(135deg,#ffe6e6,#ffdcdc); color: #503535; box-shadow: 0 4px 20px rgba(0,0,0,0.1);}
-h1 { font-family: 'Playfair Display', serif; font-size: 42px; margin-bottom: 10px; }
-p.lead { font-size: 18px; color: #5a4545; }
+.article{margin:80px 0;}
+.article h2{font-family:'Playfair Display',serif;font-size:28px;color:#503535;text-align:center;margin-bottom:20px;}
+.article img.hero{width:100%;max-height:800px;object-fit:cover;border-radius:18px;margin-bottom:30px;box-shadow:0 6px 25px rgba(0,0,0,0.15);}
 
-.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+/* 商品＋レビューブロック */
+.product-review{display:flex;align-items:flex-start;gap:30px;background:#fff;border-radius:18px;box-shadow:0 6px 20px rgba(0,0,0,0.1);padding:25px;margin-bottom:50px;}
+.product-card{flex:1;text-align:left;}
+.product-card img{width:100%;height:480px;border-radius:14px;object-fit:cover;margin-bottom:15px;}
+.product-card h3{font-size:20px;margin-bottom:10px;}
+.product-card p{font-size:15px;color:#444;margin-bottom:15px;}
+.product-card ul{font-size:14px;margin-left:18px;color:#555;}
+.product-card .btn{display:inline-block;margin-top:12px;background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;transition:0.3s;}
+.product-card .btn:hover{background:var(--accent-hover);}
 
-.article { margin: 80px 0; }
-.article h2 { font-family: 'Playfair Display', serif; font-size: 28px; color: #503535; text-align: center; margin-bottom: 20px; }
-.article img.hero { width: 100%; max-height: 400px; object-fit: cover; border-radius: 18px; margin-bottom: 30px; box-shadow: 0 6px 25px rgba(0,0,0,0.15); }
+/* レビュー */
+.review-card{flex:1;background:var(--review-bg);border-radius:14px;padding:20px;text-align:center;box-shadow:inset 0 0 10px rgba(0,0,0,0.05);margin-bottom:20px;}
+.review-card img{width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:10px;}
+.review-card p{font-size:14px;color:#333;margin-bottom:10px;}
+.review-card .name{font-weight:600;color:#555;margin-top:5px;}
 
-.product-review { display: flex; gap: 30px; flex-wrap: wrap; margin-bottom: 50px; }
-.product-card { flex: 1 1 48%; background: #fff; border-radius: 18px; padding: 20px; box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
-.product-card img { width: 100%; height: 480px; border-radius: 14px; object-fit: cover; margin-bottom: 15px; }
-.product-card h3 { font-size: 20px; margin-bottom: 10px; }
-.product-card p { font-size: 15px; color: #444; margin-bottom: 10px; }
-.product-card ul { font-size: 14px; margin-left: 18px; color: #555; margin-bottom: 10px; }
-.product-card .btn { display: inline-block; margin-top: 10px; background: var(--accent); color: #fff; padding: 10px 16px; border-radius: 10px; text-decoration: none; font-weight: 600; transition: 0.3s; }
-.product-card .btn:hover { background: var(--accent-hover); }
+/* 次の季節リンク */
+.next-season{display:block;margin-top:15px;text-align:right;}
+.next-season a{background:var(--accent);color:#fff;padding:8px 14px;border-radius:10px;text-decoration:none;font-weight:600;transition:0.3s;}
+.next-season a:hover{background:var(--accent-hover);}
 
-.review-column { flex: 1 1 48%; display: flex; flex-direction: column; gap: 20px; }
-.review-card { background: #fff5f5; border-radius: 14px; padding: 20px; text-align: center; box-shadow: inset 0 0 10px rgba(0,0,0,0.05); }
-.review-card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 10px; }
-.review-card p { font-size: 14px; color: #333; margin-bottom: 10px; }
-.review-card .name { font-weight: 600; color: #555; margin-top: 5px; }
+footer{text-align:center;font-size:13px;color:#888;margin:60px 0 30px;}
+#affiliateNotice{position:fixed;right:12px;bottom:12px;background:rgba(255,255,255,0.8);color:#555;font-size:11px;border-radius:6px;padding:4px 8px;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
 
-footer { text-align: center; font-size: 13px; color: #888; margin: 60px 0 30px; }
-
-#affiliateNotice { position: fixed; right: 12px; bottom: 12px; background: rgba(255,255,255,0.8); color: #555; font-size: 11px; border-radius: 6px; padding: 4px 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-
-.btn-back { display:inline-block; margin:40px auto 60px; background:#f7a8a8; color:#fff; padding:12px 20px; border-radius:12px; font-weight:600; text-decoration:none; text-align:center; transition:0.3s; }
-.btn-back:hover { background:#f48b8b; }
-
-@media (max-width: 768px) {
-  .product-review { flex-direction: column; }
-  .product-card, .review-column { flex: 1 1 100%; }
-}
+@media(max-width:768px){.product-review{flex-direction:column;}.product-card img{height:350px;}.review-card img{width:100px;height:100px;}}
 </style>
 </head>
-<body>
 
+<body>
 <header>
   <h1>季節別オーガニックスキンケア特集</h1>
   <p class="lead">春夏秋冬、それぞれの肌悩みに合った自然派コスメとリアルユーザーの声を紹介します。</p>
@@ -66,153 +64,140 @@ footer { text-align: center; font-size: 13px; color: #888; margin: 60px 0 30px; 
 
 <main class="container">
 
-<!-- 春 -->
-<section class="article">
-<h2>🌸 春の肌ケア</h2>
-<img src="images/spring.jpg" alt="春のスキンケア" class="hero">
-<div class="product-review">
-  <div class="product-card">
-    <img src="images/etvos.jpg" alt="ETVOS モイストバリアクリーム">
-    <h3>ETVOS モイストバリアクリーム</h3>
-    <p>過酷な乾燥・花粉シーズンでも肌を守る、ヒト型セラミド配合のオーガニッククリーム。</p>
-    <ul>
-      <li>うるおいベールで花粉・PM2.5対策</li>
-      <li>4種のヒト型セラミド配合</li>
-      <li>低刺激・無添加処方</li>
-    </ul>
-    <ul>
-      <li><strong>おすすめポイント:</strong> 肌にやさしい処方で長時間うるおいキープ</li>
-    </ul>
-    <a href="https://amzn.to/4nMuJPb" class="btn" target="_blank">今すぐチェック</a>
-  </div>
-  <div class="review-column">
-    <div class="review-card">
-      <img src="images/etvosuser.jpg" alt="30代会社員">
-      <p>春は花粉で肌荒れしやすいですが、このクリームを使って赤みが落ち着き、うるおいが長時間続きます。メイクのりも良く、朝から夕方まで快適です。</p>
-      <p class="name">30代会社員</p>
+  <!-- 春 -->
+  <section class="article">
+    <h2>🌸 春の肌ケア</h2>
+    <img src="images/spring.jpg" alt="春のスキンケア" class="hero">
+    <div class="product-review">
+      <div class="product-card">
+        <img src="images/etvos.jpg" alt="ETVOS モイストバリアクリーム">
+        <h3>ETVOS モイストバリアクリーム</h3>
+        <p>過酷な乾燥・アレルギーシーズンでも肌を守るヒト型セラミド配合クリーム。敏感な春の肌をしっかりうるおいで包み込みます。</p>
+        <ul>
+          <li>花粉・PM2.5から肌を守る</li>
+          <li>4種のヒト型セラミド配合</li>
+          <li>低刺激・無添加処方</li>
+        </ul>
+        <a href="https://amzn.to/4nMuJPb" class="btn" target="_blank">今すぐチェック</a>
+      </div>
+      <div>
+        <div class="review-card">
+          <img src="images/20.1.jpg" alt="20代女性">
+          <p>春は花粉や乾燥で肌荒れがちでしたが、ETVOSを使ってから赤みが落ち着き、1日中しっとり。メイクノリも良くなりました！</p>
+          <p class="name">20代女性</p>
+        </div>
+        <div class="review-card">
+          <img src="images/30.1.jpg" alt="30代女性">
+          <p>敏感肌でも安心して使えるクリーム。毎朝のスキンケアが楽しくなり、肌のキメが整ったのを実感しています。</p>
+          <p class="name">30代女性</p>
+        </div>
+      </div>
     </div>
-    <div class="review-card">
-      <img src="images/etvosuser2.jpg" alt="20代女性">
-      <p>敏感肌でも安心して使えます。花粉の季節でも肌が荒れず、化粧のりもアップ。友人にも勧めています。</p>
-      <p class="name">20代女性</p>
-    </div>
-  </div>
-</div>
-</section>
+    <div class="next-season"><a href="#summer">次の季節をCheck！☀️</a></div>
+  </section>
 
-<!-- 夏 -->
-<section class="article">
-<h2>☀️ 夏の肌ケア</h2>
-<img src="images/summer.jpg" alt="夏のスキンケア" class="hero">
-<div class="product-review">
-  <div class="product-card">
-    <img src="images/sunao.jpg" alt="sunao UVクリーム">
-    <h3>sunao UVクリーム</h3>
-    <p>オーガニック由来の無添加日焼け止め。紫外線吸収剤不使用で敏感肌や赤ちゃんにも安心。さらりとした使用感で化粧下地としても活躍。</p>
-    <ul>
-      <li>紫外線吸収剤不使用で低刺激</li>
-      <li>石けんで簡単オフ</li>
-      <li>SPF32 PA++ 保湿ケアも同時に</li>
-    </ul>
-    <ul>
-      <li><strong>おすすめポイント:</strong> ベタつかず快適、敏感肌でも安心</li>
-    </ul>
-    <a href="https://amzn.to/3JmEMME" class="btn" target="_blank">今すぐチェック</a>
-  </div>
-  <div class="review-column">
-    <div class="review-card">
-      <img src="images/gym40.jpg" alt="栄養士">
-      <p>ベタつかず、白浮きせず快適に使用できます。汗をかいても崩れにくく、石けんで落とせる点も魅力です。仕事中も安心して使えます。</p>
-      <p class="name">栄養士</p>
+  <!-- 夏 -->
+  <section class="article" id="summer">
+    <h2>☀️ 夏の肌ケア</h2>
+    <img src="images/summer.jpg" alt="夏のスキンケア" class="hero">
+    <div class="product-review">
+      <div class="product-card">
+        <img src="images/sunao.jpg" alt="sunao UVクリーム">
+        <h3>sunao UVクリーム</h3>
+        <p>オーガニック由来の無添加日焼け止め。敏感肌や赤ちゃんにも安心。さらりとした使用感で化粧下地にも使えます。</p>
+        <ul>
+          <li>紫外線吸収剤不使用</li>
+          <li>石けんで簡単オフ</li>
+          <li>SPF32 PA++で保湿ケアも</li>
+        </ul>
+        <a href="https://amzn.to/3JmEMME" class="btn" target="_blank">今すぐチェック</a>
+      </div>
+      <div>
+        <div class="review-card">
+          <img src="images/20.2.jpg" alt="20代女性">
+          <p>べたつかず白浮きせず快適。汗をかいても崩れにくく、石けんで落とせるので安心。毎日の外出が楽しくなりました。</p>
+          <p class="name">20代女性</p>
+        </div>
+        <div class="review-card">
+          <img src="images/40.1.jpg" alt="40代女性">
+          <p>敏感肌でも安心して使える日焼け止め。軽い使用感で化粧下地にもなり、夏の紫外線対策が簡単になりました。</p>
+          <p class="name">40代女性</p>
+        </div>
+      </div>
     </div>
-    <div class="review-card">
-      <img src="images/summeruser2.jpg" alt="20代女性">
-      <p>敏感肌でも赤くならず、長時間快適。化粧下地としても使えるのが便利で、外出時の必需品になっています。</p>
-      <p class="name">20代女性</p>
-    </div>
-  </div>
-</div>
-</section>
+    <div class="next-season"><a href="#autumn">次の季節をCheck！🍂</a></div>
+  </section>
 
-<!-- 秋 -->
-<section class="article">
-<h2>🍂 秋の肌ケア</h2>
-<img src="images/autumn.jpg" alt="秋のスキンケア" class="hero">
-<div class="product-review">
-  <div class="product-card">
-    <img src="images/naturesfor.jpg" alt="Naturesfor アドバンスクリアセラム">
-    <h3>Naturesfor アドバンスクリアセラム</h3>
-    <p>自然素材が角質層まで潤いを届け、透明感のあるクリア肌へ。植物エキスが乾燥小じわをふっくら整えます。</p>
-    <ul>
-      <li>ヘチマ水・ロサアルバ花水など自然成分配合</li>
-      <li>乾燥小じわケア</li>
-      <li>とろみのある滑らかな使用感</li>
-    </ul>
-    <ul>
-      <li><strong>おすすめポイント:</strong> 秋のゆらぎ肌にハリと潤いを与える</li>
-    </ul>
-    <a href="https://amzn.to/3LbyAYi" class="btn" target="_blank">今すぐチェック</a>
-  </div>
-  <div class="review-column">
-    <div class="review-card">
-      <img src="images/biyoushi.jpg" alt="美容師">
-      <p>季節の変わり目で乾燥が気になっていましたが、使い始めてから肌がしっとり落ち着き、透明感が増しました。朝のスキンケアが楽しみに。</p>
-      <p class="name">美容師</p>
+  <!-- 秋 -->
+  <section class="article" id="autumn">
+    <h2>🍂 秋の肌ケア</h2>
+    <img src="images/autumn.jpg" alt="秋のスキンケア" class="hero">
+    <div class="product-review">
+      <div class="product-card">
+        <img src="images/naturesfor.jpg" alt="Naturesfor アドバンスクリアセラム">
+        <h3>Naturesfor アドバンスクリアセラム</h3>
+        <p>自然素材で角質層まで潤いを届け、透明感あるクリア肌へ。乾燥小じわや秋のゆらぎ肌にハリを与えます。</p>
+        <ul>
+          <li>ヘチマ水・ロサアルバ花水など自然成分配合</li>
+          <li>乾燥小じわケア</li>
+          <li>滑らかな使用感</li>
+        </ul>
+        <a href="https://amzn.to/3LbyAYi" class="btn" target="_blank">今すぐチェック</a>
+      </div>
+      <div>
+        <div class="review-card">
+          <img src="images/30.1.jpg" alt="30代女性">
+          <p>秋の乾燥や肌荒れに悩んでいましたが、Naturesforを使って透明感が出て、肌がしっとり落ち着きました。</p>
+          <p class="name">30代女性</p>
+        </div>
+        <div class="review-card">
+          <img src="images/40.1.jpg" alt="40代女性">
+          <p>とろみのあるテクスチャーで、乾燥小じわが目立たなくなり、肌のハリが戻った感じがします。季節の変わり目でも安心。</p>
+          <p class="name">40代女性</p>
+        </div>
+      </div>
     </div>
-    <div class="review-card">
-      <img src="images/autumnuser2.jpg" alt="30代女性">
-      <p>敏感肌でも刺激なく使えます。毎日のお手入れで乾燥知らずになり、メイクのりも良くなりました。</p>
-      <p class="name">30代女性</p>
-    </div>
-  </div>
-</div>
-</section>
+    <div class="next-season"><a href="#winter">次の季節をCheck！❄️</a></div>
+  </section>
 
-<!-- 冬 -->
-<section class="article">
-<h2>❄️ 冬の肌ケア</h2>
-<img src="images/winter.jpg" alt="冬のスキンケア" class="hero">
-<div class="product-review">
-  <div class="product-card">
-    <img src="images/alos.jpg" alt="ALOS ORGANIC ローション">
-    <h3>ALOS ORGANIC ローション</h3>
-    <p>高保湿・高浸透のオーガニック化粧水。オレンジの香りでリラックスしながら乾燥肌をやさしくケア。べたつかずしっとり感が続きます。</p>
-    <ul>
-      <li>ビタミンC・レチノール配合</li>
-      <li>ヒアルロン酸で高保湿</li>
-      <li>オレンジの香りで癒やしの時間を</li>
-    </ul>
-    <ul>
-      <li><strong>おすすめポイント:</strong> 乾燥の季節でも肌をしっとり守る</li>
-    </ul>
-    <a href="https://amzn.to/4oCaXGI" class="btn" target="_blank">今すぐチェック</a>
-  </div>
-  <div class="review-column">
-    <div class="review-card">
-      <img src="images/50suser.jpg" alt="主婦">
-      <p>乾燥の季節でも肌がつっぱらず、朝までしっとり感が続きます。香りも穏やかでリラックスできます。冬の必需品です。</p>
-      <p class="name">主婦</p>
+  <!-- 冬 -->
+  <section class="article" id="winter">
+    <h2>❄️ 冬の肌ケア</h2>
+    <img src="images/winter.jpg" alt="冬のスキンケア" class="hero">
+    <div class="product-review">
+      <div class="product-card">
+        <img src="images/alos.jpg" alt="ALOS ORGANIC ローション">
+        <h3>ALOS ORGANIC ローション</h3>
+        <p>高保湿・高浸透のオーガニック化粧水。オレンジの香りで乾燥肌を優しくケアし、べたつかずしっとり感が続きます。</p>
+        <ul>
+          <li>ビタミンC・レチノール配合</li>
+          <li>ヒアルロン酸で高保湿</li>
+          <li>穏やかな香りでリラックス</li>
+        </ul>
+        <a href="https://amzn.to/4oCaXGI" class="btn" target="_blank">今すぐチェック</a>
+      </div>
+      <div>
+        <div class="review-card">
+          <img src="images/30.1.jpg" alt="30代女性">
+          <p>冬の乾燥でも肌がつっぱらず、朝までしっとり。香りも穏やかで癒され、夜のスキンケアが楽しみになりました。</p>
+          <p class="name">30代女性</p>
+        </div>
+        <div class="review-card">
+          <img src="images/40.1.jpg" alt="40代女性">
+          <p>肌にたっぷり潤いを与え、乾燥の季節でも柔らかい肌を保てます。毎日のケアが負担なく続けられます。</p>
+          <p class="name">40代女性</p>
+        </div>
+      </div>
     </div>
-    <div class="review-card">
-      <img src="images/winteruser2.jpg" alt="40代女性">
-      <p>肌が敏感になりやすい冬でも安心。使い続けるとハリが出て、化粧のりも良くなりました。</p>
-      <p class="name">40代女性</p>
-    </div>
-  </div>
-</div>
-</section>
+  </section>
 
-<div style="text-align:center;">
-  <a href="index.html" class="btn-back">トップページに戻る</a>
-</div>
+  <div style="text-align:center;margin:60px 0;">
+    <a href="index.html" class="btn">トップページに戻る</a>
+  </div>
 
 </main>
 
-<footer>
-  © 2025 EssentialBeautyNeeds
-</footer>
-
+<footer>© 2025 EssentialBeautyNeeds</footer>
 <div id="affiliateNotice">※当サイトはアフィリエイト広告を利用しています</div>
-
 </body>
 </html>

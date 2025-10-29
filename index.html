@@ -16,7 +16,9 @@ Affiliate Landing Page Template
   <meta name="description" content="自然由来のオーガニック美容アイテムを厳選紹介。リップ、ハンドクリーム、アイクリームなど肌にやさしいコスメで保湿・アンチエイジング・健康ケアをサポート。購入はアフィリエイトリンク経由で可能です。" />
   <meta name="keywords" content="オーガニック, ナチュラル, 自然, 美肌, アンチエイジング, 若返り, 健康, 美容, コスメ, 化粧品, 保湿, クリーム">
 
-  <!-- ✅ Google tag (GA4) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- ✅ Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HGEPHVZYY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -24,8 +26,6 @@ Affiliate Landing Page Template
     gtag('js', new Date());
     gtag('config', 'G-2HGEPHVZYY');
   </script>
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -36,7 +36,6 @@ Affiliate Landing Page Template
       --muted:#666;
       --btn-text:#fff;
       --section-bg:#fff9f9;
-      --review-bg:#fff5f5;
     }
     *{box-sizing:border-box;margin:0;padding:0}
     body{
@@ -45,6 +44,7 @@ Affiliate Landing Page Template
       color:#333;
     }
 
+    /* 🌸 HEADER */
     header{
       position:relative;
       background:linear-gradient(90deg,#f7e7e8,#f9d9d7);
@@ -64,17 +64,24 @@ Affiliate Landing Page Template
       background:rgba(255,255,255,0.6);
       backdrop-filter:blur(2px);
     }
-    header .container{position:relative;z-index:2;}
+    header .container{
+      position:relative;
+      z-index:2;
+    }
     h1{
       font-family:'Playfair Display',serif;
       font-size:38px;
       letter-spacing:1px;
       margin-bottom:8px;
     }
-    p.lead{font-size:17px;color:#5a4545;}
+    p.lead{
+      font-size:17px;
+      color:#5a4545;
+    }
 
     .container{max-width:980px;margin:30px auto;padding:0 16px;}
 
+    /* --- PRODUCTS --- */
     .grid{
       display:grid;
       grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
@@ -91,43 +98,41 @@ Affiliate Landing Page Template
     .card:hover{transform:translateY(-5px);box-shadow:0 8px 28px rgba(0,0,0,0.12);}
     .thumb{
       width:100%;
-      height:240px;
+      height:288px; /* 20%拡大 */
       border-radius:14px;
       overflow:hidden;
       background:#ffeef0;
     }
-    .thumb img{width:100%;height:100%;object-fit:cover;}
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
     .title{font-weight:600;margin:10px 0 6px;font-size:16px;color:#333;}
     .desc{font-size:14px;color:var(--muted);margin:0 0 12px;}
-
-    /* ✅ 改良ボタン */
     .btn{
       display:flex;
       align-items:center;
       justify-content:center;
       gap:6px;
-      text-align:center;
       width:100%;
       padding:12px 14px;
       border-radius:10px;
       text-decoration:none;
-      font-weight:700;
+      font-weight:600;
       font-size:15px;
-      background:linear-gradient(45deg,#f48b8b,#f7a8a8);
+      background:linear-gradient(45deg,#f7a8a8,#f48b8b);
       color:var(--btn-text);
-      transition:all .3s ease;
+      transition:.3s;
       box-shadow:0 4px 12px rgba(0,0,0,0.15);
     }
-    .btn::before{
-      content:"🛍️";
-      font-size:16px;
-    }
     .btn:hover{
-      background:linear-gradient(45deg,#f26a6a,#f7a8a8);
-      transform:translateY(-3px);
+      background:linear-gradient(45deg,#f48b8b,#f7a8a8);
       box-shadow:0 6px 20px rgba(0,0,0,0.25);
+      transform:translateY(-2px);
     }
 
+    /* 💬 Disclosure (右下固定) */
     .disclosure-fixed{
       position:fixed;
       right:10px;
@@ -143,6 +148,7 @@ Affiliate Landing Page Template
       z-index:99;
     }
 
+    /* --- ARTICLE SECTION --- */
     .article{margin-top:60px;}
     .article h2{
       font-family:'Playfair Display',serif;
@@ -170,35 +176,47 @@ Affiliate Landing Page Template
     }
     .article-block:nth-child(even) img{order:2;}
 
-    /* ✅ Reviews */
+    /* 🌿 REVIEWS */
     .reviews{
       margin-top:60px;
-      display:grid;
-      gap:20px;
+    }
+    .reviews h2{
+      text-align:center;
+      font-family:'Playfair Display',serif;
+      font-size:26px;
+      margin-bottom:25px;
+      color:#503535;
     }
     .review-card{
-      background:var(--review-bg);
-      border-radius:18px;
-      padding:20px;
-      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+      background:#fff;
+      border-radius:16px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
       display:flex;
-      gap:20px;
-      align-items:flex-start;
-      opacity:0;
-      transform:translateY(20px);
+      flex-direction:column;
+      align-items:center;
+      padding:20px;
+      text-align:center;
     }
-    .review-card.visible{opacity:1;transform:translateY(0);transition:.6s;}
-    .review-photo{
-      width:80px;
-      height:80px;
-      border-radius:50%;
-      flex-shrink:0;
+    .review-card img{
+      width:100%;
+      max-width:240px;
+      height:auto;
+      border-radius:12px;
+      margin-bottom:16px;
       object-fit:cover;
     }
-    .review-content{flex:1;}
-    .review-content strong{display:block;margin-bottom:6px;font-weight:600;}
-    .review-content p{font-size:14px;line-height:1.6;color:#444;}
+    .review-text{
+      font-size:14px;
+      line-height:1.7;
+      color:#444;
+    }
+    .review-name{
+      margin-top:10px;
+      font-weight:600;
+      color:#555;
+    }
 
+    /* 🌿 SECOND PRODUCT SECTION */
     .section-alt{
       background:var(--section-bg);
       padding:60px 0;
@@ -221,6 +239,8 @@ Affiliate Landing Page Template
 
     @media(max-width:600px){
       .article-block img{width:100% !important;order:0 !important;}
+      .thumb{height:240px;} /* スマホでは自動調整 */
+      .review-card img{max-width:100%;}
     }
   </style>
 </head>
@@ -233,47 +253,50 @@ Affiliate Landing Page Template
   </header>
 
   <main class="container">
-    <!-- Product Grid -->
+    <!-- Top Product Grid -->
     <div class="grid" id="productGrid"></div>
 
-    <!-- ✅ User Reviews -->
-    <section class="reviews" aria-label="ユーザーレビュー">
-      <div class="review-card">
-        <img src="images/30sai.jpg" alt="30代女性会社員" class="review-photo" loading="lazy">
-        <div class="review-content">
-          <strong>30代女性会社員：</strong>
-          <p>N Organic Basicを使い始めてから肌のキメが整い、メイクのりが驚くほど良くなりました。オーガニックに変えてからこんなに変わるなんて感動です！母にもプレゼントしました。</p>
+    <!-- REVIEWS -->
+    <section class="reviews">
+      <h2>ユーザーの声</h2>
+      <div class="grid">
+        <div class="review-card">
+          <img src="images/30sai.jpg" alt="30代女性会社員のレビュー">
+          <p class="review-text">「<strong>N Organic Basic</strong>を使ってから、乾燥が気にならなくなりました。朝起きた時の肌のしっとり感がまるで違います。オーガニックに変えてから肌質が柔らかくなって、母にもすすめています！」</p>
+          <div class="review-name">30代女性・会社員</div>
         </div>
-      </div>
-
-      <div class="review-card">
-        <img src="images/25sai.jpg" alt="25歳女性ジムインストラクター" class="review-photo" loading="lazy">
-        <div class="review-content">
-          <strong>25歳 ジムインストラクター：</strong>
-          <p>Allna Moisturizerを使ってから肌がもちもちに。乾燥知らずで、朝の目覚めもスッキリ！お通じまで良くなり、体の中から健康的に美しくなっている気がします。</p>
+        <div class="review-card">
+          <img src="images/25sai.jpg" alt="25歳ジムインストラクターのレビュー">
+          <p class="review-text">「<strong>Allna Moisturizer</strong>を使い始めてから、肌のもちもち感が全然違います！さらにお通じも良くなって、朝の目覚めがすっきり。美容と健康、どちらにも効果を感じていて、すでに友人にも勧めています。」</p>
+          <div class="review-name">25歳女性・ジムインストラクター</div>
         </div>
       </div>
     </section>
 
-    <!-- Article -->
+    <!-- ARTICLE SECTION -->
     <section class="article">
       <h2>オーガニックコスメを使うメリット</h2>
+
       <div class="article-block">
         <img src="images/article1.jpg" alt="オーガニック原料">
         <p>自然由来のオーガニック原料を使用することで、肌への刺激を抑え、敏感肌にも安心して使えます。毎日のスキンケアに心地よさと健康的な美肌をもたらします。</p>
       </div>
+
       <div class="article-block">
         <img src="images/article2.jpg" alt="肌への効果">
         <p>保湿力や抗酸化作用に優れ、肌のハリや透明感をサポート。継続的に使用することで、健やかで若々しい素肌を維持できます。</p>
       </div>
+
       <div class="article-block">
         <img src="images/article3.jpg" alt="体への効果">
         <p>化学成分を抑えた低刺激設計で、アレルギーリスクを軽減。香料や保存料の負担も少なく、体にもやさしい美容習慣が可能です。</p>
       </div>
+
       <div class="article-block">
         <img src="images/article4.jpg" alt="自然派の美">
         <p>自然派原料を活かした製品は、環境にも配慮。サステナブルなライフスタイルを実践しながら、美しく健康的な肌を育てられます。</p>
       </div>
+
       <div class="article-block">
         <img src="images/article5.jpg" alt="オーガニック美容習慣">
         <p>オーガニックコスメを取り入れることで、日常の美容習慣が充実。肌だけでなく心も潤い、自然の恵みを感じながら自分を大切にする時間になります。</p>
@@ -281,6 +304,7 @@ Affiliate Landing Page Template
     </section>
   </main>
 
+  <!-- 🌿 SECOND PRODUCT SECTION -->
   <section class="section-alt">
     <div class="container">
       <h2>おすすめオーガニックケアアイテム</h2>
@@ -295,40 +319,44 @@ Affiliate Landing Page Template
   <footer>© 2025 EssentialBeautyNeeds</footer>
 
   <script>
-    const PRODUCTS=[
+    /* --- Main Products --- */
+    const PRODUCTS = [
       {title:'N Organic Basic',desc:'自然由来成分を贅沢に配合したスキンケア。肌に優しく、うるおいを与えながら健やかな素肌へ導きます。',img:'images/skin1.jpg',aff:'https://amzn.to/479cQEZ'},
       {title:'Allna Moisturizer',desc:'肌本来のうるおいを守るオーガニック保湿クリーム。軽やかな使い心地で乾燥を防ぎ、しっとり滑らかな肌に整えます。',img:'images/moist1.jpg',aff:'https://amzn.to/3LtRo51'},
       {title:'Allna Organic Face Pack',desc:'自然成分をぎゅっと詰めたフェイスパック。肌に潤いを与えながら透明感とハリを引き出す集中ケア用マスクです。',img:'images/face1.jpg',aff:'https://amzn.to/47czgp2'}
     ];
-    const CARES=[
-      {title:'Eternum Lip Serum',desc:'ヒト幹細胞培養上清液を配合したリップケア。唇に潤いと血色感を与え、ふっくらした口元を実現。',img:'images/lip1.jpg',aff:'https://amzn.to/4qvw5jJ'},
-      {title:'Fafra Organic The Hand Cream',desc:'植物由来成分91％配合で、手肌を優しく包み込み、しっとり健康的に保ちます。',img:'images/hand1.jpg',aff:'https://amzn.to/4hr6WCw'},
-      {title:'N Organic Vie アイクリーム',desc:'バクチオール配合で乾燥小じわやハリ不足をケア。植物由来エキスが目元に潤いと弾力を与えます。',img:'images/eye1.jpg',aff:'https://amzn.to/4oJeiUA'}
+
+    /* --- Care Products --- */
+    const CARES = [
+      {title:'Eternum Lip Serum（リップセラム）',desc:'ヒト幹細胞培養上清液を配合したリップケア。唇に潤いと血色感を与え、ふっくらした口元を実現。敏感肌にも安心の美容液です。',img:'images/lip1.jpg',aff:'https://amzn.to/4qvw5jJ'},
+      {title:'Fafra Organic The Hand Cream',desc:'高保湿でさらっと仕上がる日本製ハンドクリーム。植物由来成分91％配合で、手肌を優しく包み込み、しっとり健康的に保ちます。',img:'images/hand1.jpg',aff:'https://amzn.to/4hr6WCw'},
+      {title:'N Organic Vie アイクリーム',desc:'バクチオール配合で乾燥小じわやハリ不足をケア。植物由来エキスが目元に潤いと弾力を与え、若々しい印象へ導くアイクリームです。',img:'images/eye1.jpg',aff:'https://amzn.to/4oJeiUA'}
     ];
 
-    function renderGrid(items,id){
-      const grid=document.getElementById(id);
-      items.forEach(p=>{
-        const card=document.createElement('article');
-        card.className='card';
-        card.innerHTML=`
-          <div class="thumb"><img src="${p.img}" alt="${p.title}" loading="lazy"></div>
-          <div class="title">${p.title}</div>
-          <p class="desc">${p.desc}</p>
-          <a class="btn" href="${p.aff}" target="_blank" rel="noopener noreferrer">今すぐ体験する</a>
-        `;
-        grid.appendChild(card);
-      });
-    }
+    const grid=document.getElementById('productGrid');
+    PRODUCTS.forEach(p=>{
+      const card=document.createElement('article');
+      card.className='card';
+      card.innerHTML=`
+        <div class="thumb"><img src="${p.img}" alt="${p.title}"></div>
+        <div class="title">${p.title}</div>
+        <p class="desc">${p.desc}</p>
+        <a class="btn" href="${p.aff}" target="_blank" rel="noopener noreferrer">✨ 今すぐ${p.title}を試す</a>
+      `;
+      grid.appendChild(card);
+    });
 
-    renderGrid(PRODUCTS,'productGrid');
-    renderGrid(CARES,'careGrid');
-
-    document.querySelectorAll('.review-card').forEach(card=>{
-      const obs=new IntersectionObserver((entries)=>{
-        entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
-      },{threshold:0.1});
-      obs.observe(card);
+    const careGrid=document.getElementById('careGrid');
+    CARES.forEach(p=>{
+      const card=document.createElement('article');
+      card.className='card';
+      card.innerHTML=`
+        <div class="thumb"><img src="${p.img}" alt="${p.title}"></div>
+        <div class="title">${p.title}</div>
+        <p class="desc">${p.desc}</p>
+        <a class="btn" href="${p.aff}" target="_blank" rel="noopener noreferrer">🛒 ${p.title}を体験する</a>
+      `;
+      careGrid.appendChild(card);
     });
   </script>
 </body>

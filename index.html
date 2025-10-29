@@ -7,14 +7,16 @@ Affiliate Landing Page Template
 - Do NOT publish affiliate links without reading each program's terms and including required disclosures.
 -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>オーガニックコスメ特集</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>オーガニック美容アイテムで美肌と若返りケア｜おすすめコスメ</title>
+  <meta name="description" content="自然由来のオーガニック美容アイテムを厳選紹介。リップ、ハンドクリーム、アイクリームなど肌にやさしいコスメで保湿・アンチエイジング・健康ケアをサポート。購入はアフィリエイトリンク経由で可能です。" />
+  <meta name="keywords" content="オーガニック, ナチュラル, 自然, 美肌, アンチエイジング, 若返り, 健康, 美容, コスメ, 化粧品, 保湿, クリーム">
 
-  <!-- Google Analytics -->
+  <!-- ✅ Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HGEPHVZYY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -23,233 +25,324 @@ Affiliate Landing Page Template
     gtag('config', 'G-2HGEPHVZYY');
   </script>
 
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --main-color: #f8a8b8;
-      --accent-color: #ff6f91;
-      --review-bg: #fff7f9;
+      --bg: #fff8f8;
+      --card: #ffffff;
+      --accent: #f7a8a8;
+      --accent-hover: #f48b8b;
+      --muted: #666;
+      --btn-text: #fff;
+      --section-bg: #fff9f9;
+      --review-bg: #fff5f5;
     }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Helvetica Neue', sans-serif;
-      margin: 0;
-      background: #fff;
+      font-family: 'Quicksand', sans-serif;
+      background: var(--bg);
       color: #333;
-      line-height: 1.6;
     }
 
     header {
+      position: relative;
+      background: linear-gradient(90deg, #f7e7e8, #f9d9d7);
+      border-bottom: 3px solid #e6b7b3;
       text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(120deg, #ffd6de, #fff);
+      color: #503535;
+      padding: 80px 20px;
+      background-image: url('images/header.jpg');
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: lighten;
     }
-    header h1 {
-      font-size: 2.2em;
-      color: #444;
-      margin-bottom: 10px;
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(2px);
     }
-    header p {
-      font-size: 1em;
-      color: #666;
+    header .container { position: relative; z-index: 2; }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
     }
+    p.lead { font-size: 17px; color: #5a4545; }
 
-    /* 商品カード */
-    .product-grid {
+    .container { max-width: 980px; margin: 30px auto; padding: 0 16px; }
+
+    /* ✅ 商品グリッド */
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      padding: 60px 10%;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 22px;
+      margin-top: 40px;
     }
-
-    .product-card {
-      background: #fff;
+    .card {
+      background: var(--card);
       border-radius: 18px;
-      padding: 20px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      text-align: center;
-      transition: transform .3s, box-shadow .3s;
+      padding: 18px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      transition: .3s;
     }
-    .product-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
     }
 
+    /* ✅ サムネイル高さ調整 */
     .thumb {
       width: 100%;
-      height: 346px; /* ← さらに20％アップ */
+      height: 240px;
       border-radius: 14px;
       overflow: hidden;
       background: #ffeef0;
     }
-    .thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    /* 最初と最後の3つを縦長に */
+    .grid#productGrid .card:nth-child(-n+3) .thumb,
+    .grid#careGrid .card:nth-last-child(-n+3) .thumb {
+      height: 290px;
     }
 
-    .product-card h3 {
-      margin: 18px 0 10px;
-      color: #333;
-    }
-    .product-card p {
-      font-size: 0.95em;
-      color: #555;
-    }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; }
 
-    /* CTAボタン改善 */
+    .title { font-weight: 600; margin: 10px 0 6px; font-size: 16px; color: #333; }
+    .desc { font-size: 14px; color: var(--muted); margin: 0 0 12px; }
+
     .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 26px;
-      background: linear-gradient(45deg, #f793a2, #f9a9b5);
-      color: white;
-      border: none;
-      border-radius: 50px;
-      font-weight: bold;
-      font-size: 1em;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-decoration: none;
-    }
-    .btn:hover {
-      background: linear-gradient(45deg, #f48b8b, #f7a8a8);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-      transform: translateY(-2px);
-    }
-
-    /* メリット説明セクション */
-    .benefits {
-      padding: 60px 15%;
-      background: #fff8fa;
-      text-align: center;
-    }
-    .benefits h2 {
-      color: #444;
-      font-size: 1.8em;
-      margin-bottom: 20px;
-    }
-    .benefits p {
-      font-size: 1em;
-      color: #555;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.8;
-    }
-
-    /* レビューセクション */
-    .reviews {
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
       justify-content: center;
-      gap: 30px;
-      padding: 60px 10%;
-      background: #fff7f9;
+      gap: 6px;
+      text-align: center;
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      background: linear-gradient(45deg, #f48b8b, #f7a8a8);
+      color: var(--btn-text);
+      transition: all .3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .btn::before { content: "🛍️"; font-size: 16px; }
+    .btn:hover {
+      background: linear-gradient(45deg, #f26a6a, #f7a8a8);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    }
+
+    .disclosure-fixed {
+      position: fixed;
+      right: 10px;
+      bottom: 10px;
+      background: rgba(255,255,255,0.8);
+      border-left: 3px solid #ffb4b4;
+      border-radius: 8px;
+      font-size: 10px;
+      color: #444;
+      padding: 6px 10px;
+      max-width: 180px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      z-index: 99;
+    }
+
+    /* ✅ レビュー */
+    .reviews {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
     .review-card {
-      background: #fff;
+      background: var(--review-bg);
       border-radius: 18px;
       padding: 20px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.08);
       display: flex;
-      align-items: flex-start;
       gap: 20px;
-      flex: 1 1 calc(50% - 30px); /* PCで2列にする */
-      max-width: 550px;
+      align-items: flex-start;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    .review-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: .6s;
     }
     .review-photo {
       width: 80px;
       height: 80px;
       border-radius: 50%;
-      object-fit: cover;
       flex-shrink: 0;
+      object-fit: cover;
     }
-    .review-content strong {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 600;
-      color: #444;
-    }
-    .review-content p {
-      font-size: 0.95em;
-      color: #555;
-      line-height: 1.6;
-    }
+    .review-content { flex: 1; }
+    .review-content strong { display: block; margin-bottom: 6px; font-weight: 600; }
+    .review-content p { font-size: 14px; line-height: 1.6; color: #444; }
 
-    footer {
+    /* ✅ 記事部分 */
+    .article { margin-top: 60px; }
+    .article h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #503535;
       text-align: center;
-      padding: 40px 20px;
-      font-size: 0.9em;
-      color: #888;
-      background: #fff;
+    }
+    .article p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 20px;
+    }
+    .article-block {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      gap: 16px;
+    }
+    .article-block img {
+      width: 48%;
+      border-radius: 14px;
+      object-fit: cover;
+    }
+    .article-block:nth-child(even) img { order: 2; }
+
+    .section-alt {
+      background: var(--section-bg);
+      padding: 60px 0;
+      margin-top: 60px;
+    }
+    .section-alt h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #503535;
+      margin-bottom: 30px;
     }
 
-    /* スマホ用レイアウト */
-    @media (max-width: 768px) {
-      .thumb { height: 260px; } /* スマホでは自動で調整して美しく */
-      .reviews { flex-direction: column; align-items: center; }
-      .review-card { flex: 1 1 100%; max-width: 90%; }
+    footer { text-align: center; font-size: 13px; color: #888; margin: 60px 0 30px; }
+
+    @media(max-width:600px){
+      .article-block img { width: 100% !important; order: 0 !important; }
+      .reviews { grid-template-columns: 1fr; } /* スマホでは縦並び */
     }
   </style>
 </head>
-
 <body>
   <header>
-    <h1>肌が喜ぶ、自然のちから</h1>
-    <p>厳選されたオーガニック素材で、あなたの美しさを内側からサポート</p>
+    <div class="container">
+      <h1>おすすめオーガニック美容アイテム</h1>
+      <p class="lead">心と肌にやさしい、自然派の贅沢ケアで美肌・アンチエイジング。</p>
+    </div>
   </header>
 
-  <section class="product-grid">
-    <div class="product-card">
-      <div class="thumb"><img src="images/product1.jpg" alt="N Organic Basic セラム"></div>
-      <h3>N Organic Basic</h3>
-      <p>天然由来成分で、潤いと透明感を与える大人気シリーズ。</p>
-      <a href="#" class="btn">✨ 今すぐ美肌ケアを始める</a>
-    </div>
+  <main class="container">
+    <div class="grid" id="productGrid"></div>
 
-    <div class="product-card">
-      <div class="thumb"><img src="images/product2.jpg" alt="Allna Moisturizer"></div>
-      <h3>Allna Moisturizer</h3>
-      <p>肌本来のバリア機能を高め、ハリとツヤを保つモイスチャークリーム。</p>
-      <a href="#" class="btn">🌿 潤い体験をしてみる</a>
-    </div>
-
-    <div class="product-card">
-      <div class="thumb"><img src="images/product3.jpg" alt="BioNature Essence"></div>
-      <h3>BioNature Essence</h3>
-      <p>植物幹細胞エキスで、年齢肌にアプローチ。弾むようなハリ肌へ。</p>
-      <a href="#" class="btn">💧 今すぐエッセンスを試す</a>
-    </div>
-  </section>
-
-  <section class="benefits">
-    <h2>オーガニックコスメを使うメリット</h2>
-    <p>
-      肌へのやさしさと環境への配慮を両立したオーガニックコスメ。<br>
-      化学成分を極力排除し、植物由来のエキスやオイルが肌の自然治癒力をサポートします。<br>
-      敏感肌の方にも安心してお使いいただけるほか、香りや使い心地にも癒しの効果が。<br>
-      忙しい毎日の中で、自然の力を感じながら素肌を整える贅沢を。
-    </p>
-  </section>
-
-  <section class="reviews" aria-label="ユーザーレビュー">
-    <div class="review-card">
-      <img src="images/30sai.jpg" alt="30代女性会社員" class="review-photo" loading="lazy">
-      <div class="review-content">
-        <strong>30代女性会社員：</strong>
-        <p>N Organic Basicを使い始めてから、肌の調子がぐんと良くなりました。オーガニックに変えてこんなに肌質が改善されるとは思っていませんでした！今ではアンチエイジング効果も感じられ、母にも勧めています。</p>
+    <section class="reviews" aria-label="ユーザーレビュー">
+      <div class="review-card">
+        <img src="images/30sai.jpg" alt="30代女性会社員" class="review-photo" loading="lazy">
+        <div class="review-content">
+          <strong>30代女性会社員：</strong>
+          <p>N Organic Basicを使い始めてから肌のキメが整い、メイクのりが驚くほど良くなりました。オーガニックに変えてからこんなに変わるなんて感動です！母にもプレゼントしました。</p>
+        </div>
       </div>
-    </div>
-
-    <div class="review-card">
-      <img src="images/25sai.jpg" alt="25歳、ジムインストラクター" class="review-photo" loading="lazy">
-      <div class="review-content">
-        <strong>25歳、ジムインストラクター：</strong>
-        <p>Allna Moisturizerを使って肌のもちもち感を実感しています。それだけでなくお通じも良くなり、朝の目覚めもスッキリ！早速友人にも紹介しました。</p>
+      <div class="review-card">
+        <img src="images/25sai.jpg" alt="25歳女性ジムインストラクター" class="review-photo" loading="lazy">
+        <div class="review-content">
+          <strong>25歳 ジムインストラクター：</strong>
+          <p>Allna Moisturizerを使ってから肌がもちもちに。乾燥知らずで、朝の目覚めもスッキリ！お通じまで良くなり、体の中から健康的に美しくなっている気がします。</p>
+        </div>
       </div>
+    </section>
+
+    <section class="article">
+      <h2>オーガニックコスメを使うメリット</h2>
+      <div class="article-block">
+        <img src="images/article1.jpg" alt="オーガニック原料">
+        <p>自然由来のオーガニック原料を使用することで、肌への刺激を抑え、敏感肌にも安心して使えます。</p>
+      </div>
+      <div class="article-block">
+        <img src="images/article2.jpg" alt="肌への効果">
+        <p>保湿力や抗酸化作用に優れ、肌のハリや透明感をサポート。継続的に使用することで健やかな素肌を維持できます。</p>
+      </div>
+      <div class="article-block">
+        <img src="images/article3.jpg" alt="体への効果">
+        <p>化学成分を抑えた低刺激設計で、アレルギーリスクを軽減。香料や保存料の負担も少なく体にもやさしい設計です。</p>
+      </div>
+      <div class="article-block">
+        <img src="images/article4.jpg" alt="自然派の美">
+        <p>自然派原料を活かした製品は環境にも配慮。サステナブルなライフスタイルを実践しながら、美しく健康的な肌を育てられます。</p>
+      </div>
+      <div class="article-block">
+        <img src="images/article5.jpg" alt="オーガニック美容習慣">
+        <p>オーガニックコスメを取り入れることで、日常の美容習慣が充実。肌だけでなく心も潤い、自分を大切にする時間になります。</p>
+      </div>
+    </section>
+  </main>
+
+  <section class="section-alt">
+    <div class="container">
+      <h2>おすすめオーガニックケアアイテム</h2>
+      <div class="grid" id="careGrid"></div>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Organic Beauty Japan</p>
-  </footer>
+  <div class="disclosure-fixed">
+    <strong>開示：</strong> 当サイトのリンクの一部はアフィリエイトリンクです。
+  </div>
+
+  <footer>© 2025 EssentialBeautyNeeds</footer>
+
+  <script>
+    const PRODUCTS=[
+      {title:'N Organic Basic',desc:'自然由来成分を贅沢に配合したスキンケア。',img:'images/skin1.jpg',aff:'https://amzn.to/479cQEZ'},
+      {title:'Allna Moisturizer',desc:'オーガニック保湿クリームで乾燥を防ぎます。',img:'images/moist1.jpg',aff:'https://amzn.to/3LtRo51'},
+      {title:'Allna Organic Face Pack',desc:'自然成分を詰めた集中ケアパック。',img:'images/face1.jpg',aff:'https://amzn.to/47czgp2'}
+    ];
+    const CARES=[
+      {title:'Eternum Lip Serum',desc:'幹細胞リップケアでふっくら潤い。',img:'images/lip1.jpg',aff:'https://amzn.to/4qvw5jJ'},
+      {title:'Fafra Organic The Hand Cream',desc:'手肌をやさしく保湿するオーガニッククリーム。',img:'images/hand1.jpg',aff:'https://amzn.to/4hr6WCw'},
+      {title:'N Organic Vie アイクリーム',desc:'目元にハリと潤いを与えるアイケア。',img:'images/eye1.jpg',aff:'https://amzn.to/4oJeiUA'}
+    ];
+
+    function renderGrid(items,id){
+      const grid=document.getElementById(id);
+      items.forEach(p=>{
+        const card=document.createElement('article');
+        card.className='card';
+        card.innerHTML=`
+          <div class="thumb"><img src="${p.img}" alt="${p.title}" loading="lazy"></div>
+          <div class="title">${p.title}</div>
+          <p class="desc">${p.desc}</p>
+          <a class="btn" href="${p.aff}" target="_blank" rel="noopener noreferrer">今すぐ体験する</a>
+        `;
+        grid.appendChild(card);
+      });
+    }
+    renderGrid(PRODUCTS,'productGrid');
+    renderGrid(CARES,'careGrid');
+
+    document.querySelectorAll('.review-card').forEach(card=>{
+      const obs=new IntersectionObserver(entries=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting){
+            e.target.classList.add('visible');
+            obs.unobserve(e.target);
+          }
+        });
+      },{threshold:0.1});
+      obs.observe(card);
+    });
+  </script>
 </body>
 </html>
+
+

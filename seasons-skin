@@ -1,0 +1,124 @@
+
+
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>季節別オーガニックスキンケア特集｜肌が喜ぶ自然派コスメ</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff8f8; --card:#ffffff; --accent:#f7a8a8; --accent-hover:#f48b8b; --muted:#666;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Quicksand',sans-serif;background:var(--bg);color:#333;}
+header{text-align:center;padding:80px 20px;background:linear-gradient(90deg,#f7e7e8,#f9d9d7);}
+h1{font-family:'Playfair Display',serif;font-size:38px;margin-bottom:8px;}
+p.lead{font-size:17px;color:#5a4545;}
+.container{max-width:980px;margin:30px auto;padding:0 16px;}
+.article{margin-top:60px;}
+.article h2{font-family:'Playfair Display',serif;font-size:28px;margin-bottom:20px;color:#503535;text-align:center;}
+.article-block{margin-bottom:60px;text-align:center;}
+.article-block img{width:90%;max-width:600px;height:auto;border-radius:14px;margin-bottom:20px;object-fit:cover;}
+.article-block p{font-size:15px;line-height:1.6;color:#444;margin-bottom:20px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;margin-top:20px;}
+.card{background:var(--card);border-radius:18px;padding:18px;box-shadow:0 5px 20px rgba(0,0,0,0.08);transition:.3s;}
+.card:hover{transform:translateY(-5px);box-shadow:0 8px 28px rgba(0,0,0,0.12);}
+.thumb{width:100%;height:260px;border-radius:14px;overflow:hidden;background:#ffeef0;}
+.thumb img{width:100%;height:100%;object-fit:cover;}
+.title{font-weight:600;margin:10px 0 6px;font-size:16px;color:#333;}
+.desc{font-size:14px;color:var(--muted);margin:0 0 12px;}
+.btn{display:block;text-align:center;width:100%;padding:12px 14px;border-radius:10px;text-decoration:none;font-weight:600;font-size:14px;background:var(--accent);color:#fff;transition:.3s;}
+.btn:hover{background:var(--accent-hover);}
+footer{text-align:center;font-size:13px;color:#888;margin:60px 0 30px;}
+@media(max-width:600px){.article-block img{width:100%;}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>季節別オーガニックスキンケア特集</h1>
+    <p class="lead">春夏秋冬、それぞれの肌悩みに合った自然派コスメを紹介します。</p>
+  </div>
+</header>
+
+<main class="container">
+  <!-- 春 -->
+  <section class="article">
+    <h2>春の肌ケア</h2>
+    <div class="article-block">
+      <img src="images/spring.jpg" alt="春の肌ケア" loading="lazy">
+      <p>春は花粉や乾燥が肌に影響しやすい季節です。オーガニックの保湿クリームや敏感肌向け美容液を使うことで、肌の赤みやかゆみを抑え、健やかな肌を保つことができます。植物由来成分で肌を整えるのがポイントです。</p>
+    </div>
+    <div class="grid" id="springGrid"></div>
+  </section>
+
+  <!-- 夏 -->
+  <section class="article">
+    <h2>夏の肌ケア</h2>
+    <div class="article-block">
+      <img src="images/summer.jpg" alt="夏の肌ケア" loading="lazy">
+      <p>夏は紫外線や汗による肌ダメージが増える時期。オーガニック成分のUVカットアイテムや軽めの保湿ジェルで、肌を守りつつさっぱりケアしましょう。抗酸化成分も取り入れるとより効果的です。</p>
+    </div>
+    <div class="grid" id="summerGrid"></div>
+  </section>
+
+  <!-- 秋 -->
+  <section class="article">
+    <h2>秋の肌ケア</h2>
+    <div class="article-block">
+      <img src="images/autumn.jpg" alt="秋の肌ケア" loading="lazy">
+      <p>秋は乾燥と気温差による肌トラブルが多い季節です。オーガニックオイルやクリームでしっかり保湿し、肌の水分バランスを整えましょう。自然由来のビタミンや植物エキスを取り入れるのもおすすめです。</p>
+    </div>
+    <div class="grid" id="autumnGrid"></div>
+  </section>
+
+  <!-- 冬 -->
+  <section class="article">
+    <h2>冬の肌ケア</h2>
+    <div class="article-block">
+      <img src="images/winter.jpg" alt="冬の肌ケア" loading="lazy">
+      <p>冬は乾燥が最も厳しい季節。保湿力の高いオーガニッククリームやバームを使って肌を守り、外気や暖房による乾燥を防ぎましょう。毎日のスキンケアで冬でもしっとり肌をキープできます。</p>
+    </div>
+    <div class="grid" id="winterGrid"></div>
+  </section>
+
+  <!-- トップページへ戻るボタン -->
+  <div style="text-align:center;margin:40px 0;">
+    <a href="index.html" style="display:inline-block;background:linear-gradient(45deg,#f48b8b,#f7a8a8);
+       color:#fff;padding:12px 20px;border-radius:12px;text-decoration:none;font-weight:600;
+       box-shadow:0 4px 12px rgba(0,0,0,0.15);transition:all .3s ease;">トップページに戻る</a>
+  </div>
+</main>
+
+<footer>© 2025 EssentialBeautyNeeds</footer>
+
+<script>
+const SPRING=[{title:'春の保湿クリーム',desc:'軽やかで潤うオーガニッククリーム',img:'images/product1.jpg',aff:'#'}];
+const SUMMER=[{title:'夏のUVジェル',desc:'オーガニック成分で紫外線対策',img:'images/product2.jpg',aff:'#'}];
+const AUTUMN=[{title:'秋の美容オイル',desc:'植物由来で乾燥対策',img:'images/product3.jpg',aff:'#'}];
+const WINTER=[{title:'冬の高保湿バーム',desc:'極上の保湿で乾燥から守る',img:'images/product4.jpg',aff:'#'}];
+
+function renderGrid(items,id){
+  const grid=document.getElementById(id);
+  items.forEach(p=>{
+    const card=document.createElement('article');
+    card.className='card';
+    card.innerHTML=`
+      <div class="thumb"><img src="${p.img}" alt="${p.title}" loading="lazy"></div>
+      <div class="title">${p.title}</div>
+      <p class="desc">${p.desc}</p>
+      <a class="btn" href="${p.aff}" target="_blank" rel="noopener noreferrer">今すぐ体験する</a>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+renderGrid(SPRING,'springGrid');
+renderGrid(SUMMER,'summerGrid');
+renderGrid(AUTUMN,'autumnGrid');
+renderGrid(WINTER,'winterGrid');
+</script>
+</body>
+</html>

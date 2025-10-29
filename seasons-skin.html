@@ -40,7 +40,7 @@ p.lead { font-size: 18px; color: #5a4545; }
 .article h2 { font-family: 'Playfair Display', serif; font-size: 28px; color: #503535; text-align: center; margin-bottom: 20px; }
 .article img.hero { width: 100%; max-height: 400px; object-fit: cover; border-radius: 18px; margin-bottom: 30px; box-shadow: 0 6px 25px rgba(0,0,0,0.15); }
 
-.product-review { display:flex; gap:30px; margin-bottom:30px; }
+.product-review { display:flex; gap:30px; margin-bottom:50px; }
 .product-card { flex:1; text-align:left; }
 .product-card img { width:100%; height:240px; border-radius:14px; object-fit:cover; margin-bottom:15px; }
 .product-card h3 { font-size:20px; margin-bottom:10px; }
@@ -49,20 +49,12 @@ p.lead { font-size: 18px; color: #5a4545; }
 .product-card .btn { display:inline-block; margin-top:12px; background:var(--accent); color:#fff; padding:10px 16px; border-radius:10px; text-decoration:none; font-weight:600; transition:0.3s; }
 .product-card .btn:hover { background:var(--accent-hover); }
 
-.review-card { flex:1; background:#fff5f5; border-radius:14px; padding:20px; text-align:center; box-shadow:inset 0 0 10px rgba(0,0,0,0.05); }
+.review-column { flex:1; display:flex; flex-direction:column; gap:20px; }
+
+.review-card { background:#fff5f5; border-radius:14px; padding:20px; text-align:center; box-shadow:inset 0 0 10px rgba(0,0,0,0.05); }
 .review-card img { width:120px; height:120px; border-radius:50%; object-fit:cover; margin-bottom:10px; }
 .review-card p { font-size:14px; color:#333; margin-bottom:10px; }
 .review-card .name { font-weight:600; color:#555; margin-top:5px; }
-
-.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:25px; margin-top:20px; }
-.card { background:#fff; border-radius:14px; box-shadow:0 5px 15px rgba(0,0,0,0.1); overflow:hidden; transition:0.3s; }
-.card:hover { transform: translateY(-4px); box-shadow:0 8px 25px rgba(0,0,0,0.12); }
-.card img { width:100%; height:220px; object-fit:cover; }
-.card .info { padding:15px; }
-.card .info h4 { font-size:17px; margin-bottom:8px; }
-.card .info p { font-size:14px; color:#555; margin-bottom:10px; }
-.card .btn { display:inline-block; background:var(--accent); color:#fff; padding:8px 14px; border-radius:8px; text-decoration:none; font-weight:600; }
-.card .btn:hover { background:var(--accent-hover); }
 
 footer { text-align:center; font-size:13px; color:#888; margin:60px 0 30px; }
 #affiliateNotice { position:fixed; right:12px; bottom:12px; background:rgba(255,255,255,0.8); color:#555; font-size:11px; border-radius:6px; padding:4px 8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
@@ -95,35 +87,16 @@ footer { text-align:center; font-size:13px; color:#888; margin:60px 0 30px; }
       </ul>
       <a href="https://amzn.to/4nMuJPb" class="btn" target="_blank">今すぐチェック</a>
     </div>
-    <div style="flex:1; display:flex; flex-direction:column; gap:20px;">
+    <div class="review-column">
       <div class="review-card">
         <img src="images/etvosuser.jpg" alt="30代会社員">
-        <p>「春の花粉の季節は肌荒れに悩まされていましたが、ETVOSを使ってから肌の赤みが落ち着き、1日中しっとり。メイクのノリも良くなり、肌のキメも整いました。」</p>
+        <p>「春の花粉の季節は肌荒れに悩まされましたが、ETVOSを使ってから肌の赤みが落ち着き、1日中しっとり。メイクのノリも良くなり、肌のキメも整いました。」</p>
         <p class="name">30代会社員</p>
       </div>
       <div class="review-card">
         <img src="images/20.1.jpg" alt="20代女性">
         <p>「敏感肌でも安心して使える保湿力。肌がふっくらして透明感が出てきました。毎日のスキンケアが楽しみになります。」</p>
         <p class="name">20代女性</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="grid">
-    <div class="card">
-      <img src="images/skin1.jpg" alt="おすすめアイテム1">
-      <div class="info">
-        <h4>おすすめポイント1</h4>
-        <p>自然由来成分で肌に優しく、敏感肌でも安心して使える保湿アイテム。</p>
-        <a href="#" class="btn">詳細を見る</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/moist1.jpg" alt="おすすめアイテム2">
-      <div class="info">
-        <h4>おすすめポイント2</h4>
-        <p>角質層まで潤いを届け、ふっくらとした透明感のある肌に導きます。</p>
-        <a href="#" class="btn">詳細を見る</a>
       </div>
     </div>
   </div>
@@ -145,7 +118,7 @@ footer { text-align:center; font-size:13px; color:#888; margin:60px 0 30px; }
       </ul>
       <a href="https://amzn.to/3JmEMME" class="btn" target="_blank">今すぐチェック</a>
     </div>
-    <div style="flex:1; display:flex; flex-direction:column; gap:20px;">
+    <div class="review-column">
       <div class="review-card">
         <img src="images/gym40.jpg" alt="栄養士">
         <p>「白浮きせず軽い着け心地で汗にも強い！仕事中でも快適に使えます。石けんで落とせるのも嬉しいポイントで、肌トラブルが少なく安心して使用できました。」</p>
@@ -155,25 +128,6 @@ footer { text-align:center; font-size:13px; color:#888; margin:60px 0 30px; }
         <img src="images/20.2.jpg" alt="20代女性">
         <p>「日焼け止め特有の重さやべたつきがなく、軽やかで快適。夏の外出でも肌が守られ、夕方になっても崩れにくいのが嬉しいです。」</p>
         <p class="name">20代女性</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="grid">
-    <div class="card">
-      <img src="images/face1.jpg" alt="おすすめアイテム3">
-      <div class="info">
-        <h4>おすすめポイント1</h4>
-        <p>肌に潤いを与え、夏の乾燥や日焼けから守るスキンケアアイテム。</p>
-        <a href="#" class="btn">詳細を見る</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/lip1.jpg" alt="おすすめアイテム4">
-      <div class="info">
-        <h4>おすすめポイント2</h4>
-        <p>唇や目元など乾燥しやすい箇所を保護し、しっとり感をキープ。</p>
-        <a href="#" class="btn">詳細を見る</a>
       </div>
     </div>
   </div>
@@ -195,7 +149,7 @@ footer { text-align:center; font-size:13px; color:#888; margin:60px 0 30px; }
       </ul>
       <a href="https://amzn.to/3LbyAYi" class="btn" target="_blank">今すぐチェック</a>
     </div>
-    <div style="flex:1; display:flex; flex-direction:column; gap:20px;">
+    <div class="review-column">
       <div class="review-card">
         <img src="images/biyoushi.jpg" alt="美容師">
         <p>「季節の変わり目でも肌の乾燥が気にならず、使い始めてから肌がしっとり落ち着き、透明感が出ました。肌のキメも整い、メイクのりが良くなりました。」</p>
@@ -205,25 +159,6 @@ footer { text-align:center; font-size:13px; color:#888; margin:60px 0 30px; }
         <img src="images/30.1.jpg" alt="30代女性">
         <p>「乾燥やゆらぎ肌でも安心して使用でき、肌がふっくら柔らかくなりました。香りも自然で癒されます。」</p>
         <p class="name">30代女性</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="grid">
-    <div class="card">
-      <img src="images/skin1.jpg" alt="おすすめアイテム1">
-      <div class="info">
-        <h4>おすすめポイント1</h4>
-        <p>保湿と透明感を同時にケアできるアイテム。乾燥小じわも防ぎます。</p>
-        <a href="#" class="btn">詳細を見る</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/moist1.jpg" alt="おすすめアイテム2">
-      <div class="info">
-        <h4>おすすめポイント2</h4>
-        <p>肌の柔らかさを保ちつつ、しっとりとした潤いを持続させます。</p>
-        <a href="#" class="btn">詳細を見る</a>
       </div>
     </div>
   </div>
@@ -237,7 +172,7 @@ footer { text-align:center; font-size:13px; color:#888; margin:60px 0 30px; }
     <div class="product-card">
       <img src="images/alos.jpg" alt="ALOS ORGANIC ローション">
       <h3>ALOS ORGANIC ローション</h3>
-      <p>高保湿・高浸透のオーガニック化粧水。オレンジの香りでリラックスしながら乾燥肌をやさしくケア。べたつかずしっとり感が続き、冬の乾燥も防ぎます。毎日のスキンケアで肌を守り、柔らかく健やかな肌へ。</p>
+      <p>高保湿・高浸透のオーガニック化粧水。オレンジの香りでリラックスしながら乾燥肌をやさしくケア。べたつかずしっとり感が続き、冬の乾燥も防ぎます。毎日のスキンケアで肌を守り、柔らかく健やかな肌へ導きます。</p>
       <ul>
         <li>ビタミンC・レチノール配合</li>
         <li>ヒアルロン酸で高保湿</li>
@@ -245,35 +180,16 @@ footer { text-align:center; font-size:13px; color:#888; margin:60px 0 30px; }
       </ul>
       <a href="https://amzn.to/4oCaXGI" class="btn" target="_blank">今すぐチェック</a>
     </div>
-    <div style="flex:1; display:flex; flex-direction:column; gap:20px;">
+    <div class="review-column">
       <div class="review-card">
         <img src="images/50suser.jpg" alt="主婦">
-        <p>「乾燥の季節でも肌がつっぱらず、朝までしっとり感が続きます。香りが穏やかでリラックスでき、冬のスキンケアが楽しみに。」</p>
+        <p>「乾燥の季節でも肌がつっぱらず、朝までしっとり感が続きます。香りが穏やかでリラックスできます。」</p>
         <p class="name">主婦</p>
       </div>
       <div class="review-card">
         <img src="images/40.1.jpg" alt="40代女性">
-        <p>「肌がしっとり潤い、乾燥によるかゆみも軽減。冬でも快適に使えるので手放せません。」</p>
+        <p>「冬でも肌の乾燥を感じず、毎日のケアが楽になりました。柔らかい肌触りで化粧のりも良くなります。」</p>
         <p class="name">40代女性</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="grid">
-    <div class="card">
-      <img src="images/face1.jpg" alt="おすすめアイテム3">
-      <div class="info">
-        <h4>おすすめポイント1</h4>
-        <p>乾燥から肌を守り、しっとり柔らかく保つ高保湿ローション。</p>
-        <a href="#" class="btn">詳細を見る</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/lip1.jpg" alt="おすすめアイテム4">
-      <div class="info">
-        <h4>おすすめポイント2</h4>
-        <p>敏感肌でも安心して使えるアイテムで、冬の乾燥対策に最適。</p>
-        <a href="#" class="btn">詳細を見る</a>
       </div>
     </div>
   </div>
@@ -284,9 +200,10 @@ footer { text-align:center; font-size:13px; color:#888; margin:60px 0 30px; }
 </div>
 
 </main>
+<footer>
+  © 2025 EssentialBeautyNeeds
+</footer>
 
-<footer>© 2025 EssentialBeautyNeeds</footer>
 <div id="affiliateNotice">※当サイトはアフィリエイト広告を利用しています</div>
-
 </body>
 </html>

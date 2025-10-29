@@ -1,1 +1,201 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>美肌をつくる、自然派スキンケアの真実｜美容コラム</title>
+  <meta name="description" content="オーガニックコスメや自然派スキンケアの情報をまとめたランディングページ。乾燥肌対策、30代女性の肌悩み、オーガニックと化学成分の比較など、美肌づくりに役立つコラムを紹介。" />
+  <meta name="keywords" content="オーガニック, スキンケア, 美容コラム, 乾燥肌, 肌悩み, ナチュラル, 自然派">
 
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HGEPHVZYY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2HGEPHVZYY');
+  </script>
+
+  <style>
+    :root{
+      --bg:#fff8f8;
+      --card:#ffffff;
+      --accent:#f7a8a8;
+      --accent-hover:#f48b8b;
+      --muted:#666;
+      --btn-text:#fff;
+      --section-bg:#fff9f9;
+      --review-bg:#fff5f5;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:'Quicksand',sans-serif;
+      background:var(--bg);
+      color:#333;
+    }
+
+    header{
+      position:relative;
+      background:linear-gradient(90deg,#f7e7e8,#f9d9d7);
+      text-align:center;
+      color:#503535;
+      padding:60px 20px;
+    }
+    h1{font-family:'Playfair Display',serif;font-size:36px;margin-bottom:10px;}
+    p.lead{font-size:17px;color:#5a4545;}
+
+    .container{max-width:980px;margin:0 auto;padding:0 16px;}
+
+    /* Grid */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+      gap:22px;
+      margin-top:30px;
+    }
+    .card{
+      background:var(--card);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+      transition:.3s;
+    }
+    .card:hover{transform:translateY(-5px);box-shadow:0 8px 28px rgba(0,0,0,0.12);}
+    .thumb{width:100%;height:260px;border-radius:14px;overflow:hidden;background:#ffeef0;}
+    .thumb img{width:100%;height:100%;object-fit:cover;}
+    .title{font-weight:600;margin:10px 0 6px;font-size:16px;color:#333;}
+    .desc{font-size:14px;color:var(--muted);margin:0 0 12px;}
+
+    .btn{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:6px;
+      text-align:center;
+      width:100%;
+      padding:12px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:15px;
+      background:linear-gradient(45deg,#f48b8b,#f7a8a8);
+      color:var(--btn-text);
+      transition:all .3s ease;
+      box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    }
+    .btn::before{content:"🛍️";font-size:16px;}
+    .btn:hover{
+      background:linear-gradient(45deg,#f26a6a,#f7a8a8);
+      transform:translateY(-3px);
+      box-shadow:0 6px 20px rgba(0,0,0,0.25);
+    }
+
+    section.article{
+      margin-top:50px;
+    }
+    .article h2{
+      font-family:'Playfair Display',serif;font-size:28px;margin-bottom:20px;color:#503535;text-align:center;
+    }
+    .article-block{
+      display:flex;
+      flex-wrap:wrap;
+      margin-bottom:40px;
+      gap:16px;
+      align-items:center;
+    }
+    .article-block img{
+      width:48%;
+      border-radius:14px;
+      object-fit:cover;
+    }
+    .article-block:nth-child(even) img{order:2;}
+    .article-block p{font-size:15px;line-height:1.6;color:#444;}
+
+    /* Reviews */
+    .reviews{margin-top:60px;display:grid;gap:20px;}
+    .review-card{
+      background:var(--review-bg);
+      border-radius:18px;
+      padding:20px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+      display:flex;
+      gap:20px;
+      align-items:flex-start;
+      opacity:0;
+      transform:translateY(20px);
+    }
+    .review-card.visible{opacity:1;transform:translateY(0);transition:.6s;}
+    .review-photo{width:80px;height:80px;border-radius:50%;flex-shrink:0;object-fit:cover;}
+    .review-content{flex:1;}
+    .review-content strong{display:block;margin-bottom:6px;font-weight:600;}
+    .review-content p{font-size:14px;line-height:1.6;color:#444;}
+
+    .section-alt{
+      background:var(--section-bg);
+      padding:60px 0;
+      margin-top:60px;
+    }
+    .section-alt h2{
+      text-align:center;
+      font-family:'Playfair Display',serif;
+      font-size:28px;
+      color:#503535;
+      margin-bottom:30px;
+    }
+
+    footer{text-align:center;font-size:13px;color:#888;margin:60px 0 30px;}
+
+    @media(max-width:600px){
+      .article-block img{width:100% !important;order:0 !important;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>美肌をつくる、自然派スキンケアの真実</h1>
+      <p class="lead">乾燥肌対策から30代女性の肌悩み、オーガニック vs 化学成分までまとめた美容コラムページです。</p>
+      <a href="index.html" class="btn" style="margin-top:20px;">🏠 TOPページへ戻る</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="article">
+      <h2>乾燥肌におすすめのオーガニック成分とは？</h2>
+      <div class="article-block">
+        <img src="images/dry-skin.jpg" alt="乾燥肌におすすめのオーガニック成分">
+        <p>肌の乾燥を防ぐ保湿力に優れたオーガニック成分を紹介。毎日のスキンケアでしっとり潤う肌へ導きます。</p>
+      </div>
+    </section>
+
+    <section class="article">
+      <h2>30代女性の肌悩みと自然派コスメの関係</h2>
+      <div class="article-block">
+        <img src="images/30s-skin.jpg" alt="30代女性の肌悩み">
+        <p>年齢とともに変化する肌悩みに自然派スキンケアがどうアプローチするかを解説。アンチエイジング効果や保湿ケアのポイントも紹介。</p>
+      </div>
+    </section>
+
+    <section class="article">
+      <h2>オーガニック vs ケミカル、どっちが本当に肌にいいの？</h2>
+      <div class="article-block">
+        <img src="images/organic-vs-chemical.jpg" alt="オーガニックと化学成分の比較">
+        <p>化学成分とオーガニック成分の特徴や肌への影響を比較。自分に合ったスキンケアを選ぶポイントをまとめています。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <a href="index.html" class="btn">🏠 TOPページへ戻る</a>
+      <p>© 2025 EssentialBeautyNeeds</p>
+    </div>
+  </footer>
+
+  <script>
+    // アニメーション：スクロールでレビューが表示される場合に利用（ここではまだレビューなし）
+  </script>
+</body>
+</html>

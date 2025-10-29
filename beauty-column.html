@@ -2,104 +2,161 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>オーガニック美容コラム｜肌が喜ぶ自然派コスメ</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#fff8f8;
-  --card:#ffffff;
-  --accent:#f7a8a8;
-  --accent-hover:#f48b8b;
-  --muted:#666;
-}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'Quicksand',sans-serif;background:var(--bg);color:#333;}
-header{text-align:center;padding:80px 20px;background:linear-gradient(90deg,#f7e7e8,#f9d9d7);}
-h1{font-family:'Playfair Display',serif;font-size:38px;margin-bottom:8px;}
-p.lead{font-size:17px;color:#5a4545;}
-.container{max-width:980px;margin:30px auto;padding:0 16px;}
-.article{margin-top:60px;}
-.article h2{font-family:'Playfair Display',serif;font-size:28px;margin-bottom:20px;color:#503535;text-align:center;}
-.article-block{margin-bottom:60px;text-align:center;}
-.article-block img{width:90%;max-width:600px;height:auto;border-radius:14px;margin-bottom:20px;object-fit:cover;}
-.article-block p{font-size:15px;line-height:1.6;color:#444;margin-bottom:20px;}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;margin-top:20px;}
-.card{background:var(--card);border-radius:18px;padding:18px;box-shadow:0 5px 20px rgba(0,0,0,0.08);transition:.3s;}
-.card:hover{transform:translateY(-5px);box-shadow:0 8px 28px rgba(0,0,0,0.12);}
-.thumb{width:100%;height:260px;border-radius:14px;overflow:hidden;background:#ffeef0;}
-.thumb img{width:100%;height:100%;object-fit:cover;}
-.title{font-weight:600;margin:10px 0 6px;font-size:16px;color:#333;}
-.desc{font-size:14px;color:var(--muted);margin:0 0 12px;}
-.btn{
-  display:inline-block;
-  text-align:center;
-  padding:14px 22px;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:600;
-  font-size:15px;
-  background:linear-gradient(45deg,#f48b8b,#f7a8a8);
-  color:#fff;
-  transition:all .3s ease;
-  box-shadow:0 4px 12px rgba(0,0,0,0.15);
-}
-.btn:hover{
-  background:linear-gradient(45deg,#f26a6a,#f7a8a8);
-  transform:translateY(-3px);
-  box-shadow:0 6px 20px rgba(0,0,0,0.25);
-}
-footer{text-align:center;font-size:13px;color:#888;margin:60px 0 30px;}
-@media(max-width:600px){
-  .article-block img{width:100%;}
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ビューティーコラム｜肌と心を整える、オーガニックケアの秘密</title>
+  <meta name="description" content="自然のちからを取り入れたオーガニック美容コラム。皮膚科医・藤井紗季先生のコメントとともに、健やかで輝く肌を育む秘訣をお届けします。" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body{
+      font-family:'Quicksand',sans-serif;
+      line-height:1.8;
+      color:#444;
+      background:#fffaf9;
+      margin:0;
+    }
+    header{
+      background:linear-gradient(90deg,#f8dcdc,#fbeaea);
+      text-align:center;
+      padding:80px 20px;
+      background-image:url('images/organic-care.jpg');
+      background-size:cover;
+      background-position:center;
+      background-blend-mode:lighten;
+      position:relative;
+      color:#503535;
+    }
+    header::after{
+      content:"";
+      position:absolute;
+      top:0;left:0;right:0;bottom:0;
+      background:rgba(255,255,255,0.6);
+    }
+    header h1{
+      position:relative;
+      z-index:2;
+      font-family:'Playfair Display',serif;
+      font-size:38px;
+      margin-bottom:10px;
+    }
+    header p{
+      position:relative;
+      z-index:2;
+      font-size:16px;
+      color:#5a4545;
+    }
+
+    main{max-width:900px;margin:60px auto;padding:0 20px;}
+    h2{
+      font-family:'Playfair Display',serif;
+      color:#503535;
+      margin-top:60px;
+      font-size:28px;
+      text-align:center;
+    }
+    p{margin-bottom:20px;font-size:15px;}
+    img{
+      width:100%;
+      border-radius:12px;
+      margin:25px 0;
+    }
+
+    /* ✅ 専門家コメント */
+    .expert-box{
+      background:#fff3f3;
+      border-left:5px solid #f7a8a8;
+      padding:20px;
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin:40px 0;
+    }
+    .expert-box img{
+      width:90px;
+      height:90px;
+      border-radius:50%;
+      object-fit:cover;
+      flex-shrink:0;
+    }
+    .expert-comment{
+      font-size:14px;
+      color:#333;
+    }
+    .expert-comment strong{display:block;margin-bottom:4px;}
+
+    footer{
+      text-align:center;
+      font-size:13px;
+      color:#777;
+      margin:60px 0 30px;
+    }
+
+    @media(max-width:600px){
+      header h1{font-size:30px;}
+      .expert-box{flex-direction:column;text-align:center;}
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>ビューティーコラム</h1>
+    <p>肌と心を整える、オーガニックケアの秘密</p>
+  </header>
 
-<header>
-  <div class="container">
-    <h1>オーガニック美容コラム</h1>
-    <p class="lead">肌にやさしい自然派コスメの情報をお届けします</p>
-  </div>
-</header>
+  <main>
+    <section>
+      <h2>自然のリズムに寄り添うスキンケア</h2>
+      <p>季節が巡るたびに、肌はその変化を敏感に感じ取っています。春には花粉や紫外線、夏には汗と皮脂、秋には乾燥、そして冬には冷気と暖房。どの季節も、肌にとっては小さな試練の連続です。</p>
+      <p>オーガニックケアは、そんな肌の声を静かに聞き取るような存在です。自然の恵みを活かした植物エキスや精油は、過剰な刺激を与えずに肌を守り、ゆるやかに整えてくれます。香りや手ざわりもまた、心にやさしく寄り添う要素のひとつ。スキンケアを「癒しの時間」として感じる人が増えているのも頷けます。</p>
+      <img src="images/30s-skincare.jpg" alt="スキンケアをする女性">
+      <p>朝、鏡の前で肌を触れた瞬間に「今日の調子、いいかも」と感じる。そんな小さな喜びが、心を軽やかにしてくれます。オーガニックコスメは、単なる化粧品ではなく、“自分と向き合うためのツール”なのかもしれません。</p>
+    </section>
 
-<main class="container">
+    <section>
+      <h2>皮膚科医が語る「肌の自活力」</h2>
 
-  <!-- コラム記事サンプル -->
-  <section class="article">
-    <h2>乾燥肌におすすめのオーガニック成分</h2>
-    <div class="article-block">
-      <img src="images/dry-skin.jpg" alt="乾燥肌におすすめのオーガニック成分" loading="lazy">
-      <p>乾燥肌に悩む方に向けて、オーガニック成分の保湿力や肌への優しさを詳しく解説。クリームや植物エキスを使ったケアで、ふっくらうるおい肌に導きます。</p>
-    </div>
-  </section>
+      <div class="expert-box">
+        <img src="images/expert-morimoto.jpg" alt="皮膚科医・藤井紗季先生">
+        <div class="expert-comment">
+          <strong>皮膚科医・藤井紗季先生 コメント</strong>
+          「オーガニック成分は“肌のバリア機能”をサポートする点で非常に優れています。  
+          肌は本来、自分で潤いを保ち、傷を修復する力を持っていますが、過剰な化学成分や摩擦がその働きを弱めてしまうことがあります。  
+          自然の成分で穏やかにケアすることは、肌の“自活力”を取り戻す第一歩なんです。」
+        </div>
+      </div>
 
-  <section class="article">
-    <h2>30代女性の肌悩みと自然派コスメ</h2>
-    <div class="article-block">
-      <img src="images/30s-skin.jpg" alt="30代女性の肌悩みと自然派コスメ" loading="lazy">
-      <p>30代女性の肌は乾燥や小ジワ、くすみなどの悩みが増える時期。自然派コスメで丁寧にケアすることで、肌本来の健康的な美しさを取り戻すことができます。</p>
-    </div>
-  </section>
+      <p>藤井先生の言葉にもある通り、「与えるケア」より「育てるケア」が今の時代の主流になりつつあります。  
+      毎日のクレンジングや保湿の選び方一つで、肌の未来が変わる。オーガニックアイテムを選ぶということは、  
+      その選択そのものが“肌を信じる”という行為なのかもしれません。</p>
 
-  <section class="article">
-    <h2>オーガニック vs ケミカル、どっちが本当に肌にいいの？</h2>
-    <div class="article-block">
-      <img src="images/organic-vs-chemical.jpg" alt="オーガニックとケミカルの比較" loading="lazy">
-      <p>肌に優しいのはオーガニック？それともケミカル？成分や刺激性、保湿力の違いを比較し、肌への影響をわかりやすく解説。自分の肌に合った選択ができる情報を提供します。</p>
-    </div>
-  </section>
+      <p>たとえば、オーガニックローションは保湿だけでなく、肌の水分循環をサポートします。  
+      オイルやクリームは外から守るのではなく、内側の潤いを閉じ込めるように働きかけてくれます。  
+      こうした小さな積み重ねが、やがて揺らぎにくい肌をつくり上げていくのです。</p>
+    </section>
 
-  <!-- 季節別スキンケアページへのリンク -->
-  <div style="text-align:center;margin:50px 0;">
-    <a href="seasons-skin.html" class="btn">季節別オーガニックスキンケア特集を見る</a>
-  </div>
+    <section>
+      <h2>自分の肌を愛するということ</h2>
+      <p>「オーガニック」という言葉は、ただの流行ではありません。  
+      それは、肌や地球と“共に生きる”という考え方に近いものです。  
+      肌に何を与えるかだけでなく、どう向き合うか。そこに美しさの本質があるように思います。</p>
 
-</main>
+      <p>朝の洗顔、夜のスキンケア。ほんの数分の時間でも、  
+      自然の香りに包まれて深呼吸をすれば、心も肌も少しずつ柔らかくほぐれていきます。  
+      肌を大切にするということは、自分の生き方を丁寧に扱うことでもあるのです。</p>
 
-<footer>© 2025 EssentialBeautyNeeds</footer>
+      <img src="images/natural-beauty.jpg" alt="自然の中でリラックスする女性">
 
+      <p>オーガニックケアは“足す美容”ではなく、“戻す美容”。  
+      自然に還るように、シンプルに、穏やかに。  
+      肌の声を聞きながら、自分らしい美しさを見つけていく。  
+      そのプロセスこそが、ほんとうの「ビューティー」なのかもしれません。</p>
+
+      <p>今日のケアが、明日のあなたを作ります。  
+      自然のちからと、自分を信じる力を味方に、あなたらしい輝きを育てていきましょう。</p>
+    </section>
+  </main>
+
+  <footer>© 2025 EssentialBeautyNeeds</footer>
 </body>
 </html>

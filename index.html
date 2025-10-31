@@ -107,6 +107,40 @@ Affiliate Landing Page Template
       .review-photo{width:90px;height:90px;}
     }
   </style>
+  
+<!-- ✅ OGP設定 -->
+<meta property="og:title" content="季節別スキンケアのおすすめ | Essential Beauty Needs">
+<meta property="og:description" content="春夏秋冬それぞれの肌ケアのポイントやおすすめオーガニック商品を紹介。敏感肌にも安心な美容法を解説。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://essentialbeautyneeds.github.io/">
+<meta property="og:image" content="https://essentialbeautyneeds.github.io/images/ogp.jpg">
+<meta property="og:site_name" content="Essential Beauty Needs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="季節別スキンケアのおすすめ | Essential Beauty Needs">
+<meta name="twitter:description" content="自然派・オーガニック商品で肌も心も美しく。">
+<meta name="twitter:image" content="https://essentialbeautyneeds.github.io/images/ogp.jpg">
+  
+  <!-- ✅ 構造化データ（Product + Affiliate） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "WebSite",
+  "name": "Essential Beauty Needs",
+  "url": "https://essentialbeautyneeds.github.io/",
+  "description": "オーガニックコスメや自然派スキンケア商品を紹介。Amazonアフィリエイトを通じて、美容と健康をサポートします。",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Essential Beauty Needs",
+    "url": "https://essentialbeautyneeds.github.io/",
+    "logo": "https://essentialbeautyneeds.github.io/images/logo.png"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://essentialbeautyneeds.github.io/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
 </head>
 <body>
   <header>
@@ -126,52 +160,42 @@ Affiliate Landing Page Template
   </header>
 
   <main class="container">
-    <!-- 🌸 商品グリッド -->
-    <div class="grid" id="productGrid"></div>
 
-    <!-- 💬 レビュー -->
-    <section class="reviews">
-      <div class="review-card">
-        <img src="images/30sai.jpg" alt="30代女性会社員" class="review-photo">
-        <div class="review-content">
-          <strong>30代女性 会社員：</strong>
-          <p>N Organic Basicを使い始めてから、肌のキメが整い、メイクのりが驚くほど良くなりました。自然由来の成分で毎日安心して使えるのが嬉しいです♪今は母と使ってます！</p>
-        </div>
-      </div>
-      <div class="review-card">
-        <img src="images/25sai.jpg" alt="25歳女性 ジムインストラクター" class="review-photo">
-        <div class="review-content">
-          <strong>25歳女性 ジムインストラクター：</strong>
-          <p>Allna Moisturizerを使ってから肌がもちもちになり、乾燥知らずに。朝の目覚めも快適で、友人にもおすすめしています。肌が自然に潤う感覚が嬉しいです。</p>
-        </div>
-      </div>
-    </section>
+  <h2>おすすめのオーガニックコスメ商品</h2>
+  <p>自然由来成分にこだわったオーガニックコスメを厳選。肌本来の美しさを引き出す人気商品をご紹介します。</p>
+  <div class="grid" id="productGrid"></div>
 
-    <!-- 🌿 記事セクション -->
-    <section class="article">
-      <h2>オーガニックコスメを使うメリット</h2>
-      <div class="article-block">
-        <img src="images/article1.jpg" alt="オーガニック原料">
-        <p>自然由来のオーガニック原料を使用することで、肌への刺激を抑え、敏感肌にも安心して使えます。化学合成物質を避けることで、肌のバリア機能を守りながら潤いを保つことができます。</p>
-      </div>
-      <div class="article-block">
-        <img src="images/article2.jpg" alt="肌への効果">
-        <p>保湿力や抗酸化作用に優れ、肌のハリや透明感をサポートします。継続使用で、健やかで若々しい素肌を維持できます。肌のキメが整い、メイクのりも向上します。</p>
-      </div>
-      <div class="article-block">
-        <img src="images/article3.jpg" alt="体への効果">
-        <p>化学成分を抑えた低刺激設計で、アレルギーリスクを軽減。香料や保存料の負担も少なく、体にもやさしい美容習慣が可能です。肌に触れるものへの安心感が高まります。</p>
-      </div>
-      <div class="article-block">
-        <img src="images/article4.jpg" alt="自然派の美">
-        <p>自然派原料を活かした製品は、環境にも配慮。サステナブルなライフスタイルを実践しながら、美しく健康的な肌を育てられます。自然の恵みを感じる時間を持つことは心にも良い影響があります。</p>
-      </div>
-      <div class="article-block">
-        <img src="images/article5.jpg" alt="オーガニック美容習慣">
-        <p>オーガニックコスメを取り入れることで、日常の美容習慣が充実。肌だけでなく心も潤い、自然の恵みを感じながら自分を大切にする時間になります。心地よく使える製品選びが大切です。</p>
-      </div>
-    </section>
-  </main>
+  <h2>実際に使った人のレビュー</h2>
+  <p>実際に使った方のリアルな口コミを掲載。購入前の参考にしてください。</p>
+  <section class="reviews">
+    <!-- レビューを追加予定 -->
+  </section>
+
+  <h2>オーガニックコスメを選ぶ理由</h2>
+  <p>肌や環境にやさしいオーガニック製品を選ぶことで、健やかな美しさを育てることができます。</p>
+
+  <section class="article">
+
+    <h3>自然由来成分のやさしさ</h3>
+    <div class="article-block">
+      <img src="images/article1.jpg" alt="オーガニック原料">
+      <p>自然由来の原料を使用することで、肌への刺激を最小限に。敏感肌でも安心して使えるのが魅力です。</p>
+    </div>
+
+    <h3>高い保湿力とハリのサポート</h3>
+    <div class="article-block">
+      <img src="images/article2.jpg" alt="肌への効果">
+      <p>オーガニック成分には抗酸化作用があり、肌のハリと潤いをキープ。日々のケアに欠かせません。</p>
+    </div>
+
+    <h3>体と環境へのやさしさ</h3>
+    <div class="article-block">
+      <img src="images/article3.jpg" alt="体への効果">
+      <p>化学成分を控えた製品は、肌への負担が少なく、環境にも配慮されています。</p>
+    </div>
+
+  </section>
+</main>
 
   <section class="section-alt">
     <div class="container">
@@ -237,6 +261,7 @@ Affiliate Landing Page Template
   </script>
 </body>
 </html>
+
 
 
 

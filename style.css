@@ -120,3 +120,19 @@ footer {
     padding: 20px;
     font-size: 0.9em;
 }
+
+/* 商品一覧の下に少し余白を作る */
+#productGrid {
+  margin-bottom: 2.5rem; /* ←ここで商品と次のセクションの間隔を広げる */
+}
+
+/* レビュー全体の余白を微調整 */
+.reviews {
+  margin-top: 0.5rem; /* ←見出しとの間を詰める */
+}
+
+/* 見出し（h2）が reviews セクション直前にある場合の調整 */
+h2 + .reviews {
+  margin-top: 0.5rem; /* h2の直下にある場合、ギュッと近づける */
+}
+
